@@ -3,6 +3,10 @@
 ## Thành viên dự án
 - **Trần Anh Tú:** 23010332
 
+## Truy cập dự án (sản phẩm)
+- **Public Link:**
+- **Demo Link:**
+
 ## Mô tả
 `Quế VĂN YÊN` là một ứng dụng web thương mại điện tử chuyên bán các sản phẩm từ quế cao cấp, được xây dựng trên Laravel Framework và PHP. Website cung cấp giao diện thân thiện, tính năng quản lý sản phẩm, giỏ hàng và thanh toán bảo mật.
 
