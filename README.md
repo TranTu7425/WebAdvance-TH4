@@ -14,7 +14,7 @@
 - **Đăng ký / Đăng nhập**: Hệ thống xác thực người dùng (Laravel Auth).
 - **Quản lý sản phẩm**: Thêm, sửa, xóa sản phẩm quế với hình ảnh, giá cả, mô tả chi tiết.
 - **Duyệt danh mục**: Phân loại sản phẩm theo loại quế, nguồn gốc.
-- **Giỏ hàng & Thanh toán**: Thêm sản phẩm vào giỏ, cập nhật số lượng, xử lý thanh toán qua cổng (ví dụ: Stripe, PayPal).
+- **Giỏ hàng & Thanh toán**: Thêm sản phẩm vào giỏ, cập nhật số lượng, xử lý thanh toán qua cổng (ví dụ: Napas, MoMo,...).
 - **Đơn hàng**: Xem lịch sử đơn hàng, trạng thái (chờ xử lý, đã giao).
 - **Liên hệ & Bình luận**: Form liên hệ, gửi phản hồi; người dùng có thể bình luận về sản phẩm.
 - **Dashboard Admin**: Thống kê doanh thu, quản lý đơn hàng, quản lý người dùng.
