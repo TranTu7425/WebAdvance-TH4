@@ -42,7 +42,7 @@
             alt="Woman Fashion 1"
             class="slideshow-character__img animate animate_fade animate_btt animate_delay-9 w-auto h-auto" />
           <div class="character_markup">
-            <p class="text-uppercase font-sofia fw-bold animate animate_fade animate_rtl animate_delay-10">Summer
+            <p class="text-uppercase font-sofia fw-bold animate animate_fade animate_rtl animate_delay-10">Tinh dầu
             </p>
           </div>
         </div>
@@ -292,10 +292,10 @@
                   <div
                     class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                      data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                      data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                       data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                      <span class="d-none d-xxl-block">Quick View</span>
+                      <span class="d-none d-xxl-block">Xem nhanh</span>
                       <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_view" />
@@ -329,10 +329,10 @@
                   <div
                     class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                      data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                      data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                       data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                      <span class="d-none d-xxl-block">Quick View</span>
+                      <span class="d-none d-xxl-block">Xem nhanh</span>
                       <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_view" />
@@ -366,10 +366,10 @@
                   <div
                     class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                      data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                      data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                       data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                      <span class="d-none d-xxl-block">Quick View</span>
+                      <span class="d-none d-xxl-block">Xem nhanh</span>
                       <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_view" />
@@ -404,10 +404,10 @@
                   <div
                     class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                      data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                      data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                       data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                      <span class="d-none d-xxl-block">Quick View</span>
+                      <span class="d-none d-xxl-block">Xem nhanh</span>
                       <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_view" />
@@ -441,10 +441,10 @@
                   <div
                     class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                      data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                      data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                       data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                      <span class="d-none d-xxl-block">Quick View</span>
+                      <span class="d-none d-xxl-block">Xem nhanh</span>
                       <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_view" />
@@ -478,10 +478,10 @@
                   <div
                     class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                      data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                      data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                       data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                      <span class="d-none d-xxl-block">Quick View</span>
+                      <span class="d-none d-xxl-block">Xem nhanh</span>
                       <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_view" />
@@ -515,10 +515,10 @@
                   <div
                     class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                      data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                      data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                       data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                      <span class="d-none d-xxl-block">Quick View</span>
+                      <span class="d-none d-xxl-block">Xen nhanh</span>
                       <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_view" />
@@ -553,10 +553,10 @@
                   <div
                     class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                      data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                      data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
                     <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                       data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                      <span class="d-none d-xxl-block">Quick View</span>
+                      <span class="d-none d-xxl-block">Xem nhanh</span>
                       <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="#icon_view" />
@@ -614,7 +614,7 @@
   <div class="mb-3 mb-xl-5 pt-1 pb-4"></div>
 
   <section class="products-grid container">
-    <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">Featured Products</h2>
+    <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">Sản phẩm nổi bật</h2>
 
     <div class="row">
       <div class="col-6 col-md-4 col-lg-3">
@@ -635,10 +635,10 @@
             <div
               class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                 data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                <span class="d-none d-xxl-block">Quick View</span>
+                <span class="d-none d-xxl-block">Xem nhanh</span>
                 <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_view" />
@@ -671,10 +671,10 @@
             <div
               class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                 data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                <span class="d-none d-xxl-block">Quick View</span>
+                <span class="d-none d-xxl-block">Xem nhanh</span>
                 <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_view" />
@@ -696,7 +696,7 @@
               <img loading="lazy" src="{{ asset('assets/images/home/demo3/product-6.jpg') }}" width="330" height="400"
                 alt="Cropped Faux leather Jacket" class="pc__img">
             </a>
-            <div class="product-label text-uppercase bg-white top-0 left-0 mt-2 mx-2">New</div>
+            <div class="product-label text-uppercase bg-white top-0 left-0 mt-2 mx-2">Mới</div>
           </div>
 
           <div class="pc__info position-relative">
@@ -708,10 +708,10 @@
             <div
               class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                 data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                <span class="d-none d-xxl-block">Quick View</span>
+                <span class="d-none d-xxl-block">Xem nhanh</span>
                 <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_view" />
@@ -746,10 +746,10 @@
             <div
               class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                 data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                <span class="d-none d-xxl-block">Quick View</span>
+                <span class="d-none d-xxl-block">Xem nhanh</span>
                 <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_view" />
@@ -782,10 +782,10 @@
             <div
               class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                 data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                <span class="d-none d-xxl-block">Quick View</span>
+                <span class="d-none d-xxl-block">Xem nhanh</span>
                 <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_view" />
@@ -818,10 +818,10 @@
             <div
               class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                 data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                <span class="d-none d-xxl-block">Quick View</span>
+                <span class="d-none d-xxl-block">Xem nhanh</span>
                 <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_view" />
@@ -854,10 +854,10 @@
             <div
               class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                 data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                <span class="d-none d-xxl-block">Quick View</span>
+                <span class="d-none d-xxl-block">Xem nhanh</span>
                 <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_view" />
@@ -891,10 +891,10 @@
             <div
               class="anim_appear-bottom position-absolute bottom-0 start-0 d-none d-sm-flex align-items-center bg-body">
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-add-cart js-open-aside"
-                data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                data-aside="cartDrawer" title="Add To Cart">Thêm vào giỏ hàng</button>
               <button class="btn-link btn-link_lg me-4 text-uppercase fw-medium js-quick-view"
                 data-bs-toggle="modal" data-bs-target="#quickView" title="Quick view">
-                <span class="d-none d-xxl-block">Quick View</span>
+                <span class="d-none d-xxl-block">Xem nhanh</span>
                 <span class="d-block d-xxl-none"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_view" />
@@ -912,7 +912,7 @@
     </div><!-- /.row -->
 
     <div class="text-center mt-2">
-      <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="#">Load More</a>
+      <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="#">Xem thêm</a>
     </div>
   </section>
 </div>
