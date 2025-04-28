@@ -7,9 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Quế Văn Yên - Khát vọng vươn xa') }}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="surfside media" />
+    <meta name="author" content="Quế Văn Yên" />
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link
@@ -331,7 +331,7 @@
             xmlns="http://www.w3.org/2000/svg">
             <use href="#icon_user" />
           </svg>
-          <span class="d-inline-block ms-2 text-uppercase align-middle fw-medium">My Account</span>
+          <span class="d-inline-block ms-2 text-uppercase align-middle fw-medium">Tài khoản của tôi</span>
         </div>
 
 
@@ -427,7 +427,7 @@
 
             <div class="search-popup js-hidden-content">
               <form action="#" method="GET" class="search-field container">
-                <p class="text-uppercase text-secondary fw-medium mb-4">What are you looking for?</p>
+                <p class="text-uppercase text-secondary fw-medium mb-4">Bạn đang cần gì nhỉ?</p>
                 <div class="position-relative">
                   <input class="search-field__input search-popup__input w-100 fw-medium" type="text"
                     name="search-keyword" placeholder="Search products" />
@@ -442,7 +442,7 @@
 
                 <div class="search-popup__results">
                   <div class="sub-menu search-suggestion">
-                    <h6 class="sub-menu__title fs-base">Quicklinks</h6>
+                    <h6 class="sub-menu__title fs-base">Đường dẫn nhanh</h6>
                     <ul class="sub-menu__list list-unstyled">
                       <li class="sub-menu__item"><a href="shop2.html" class="menu-link menu-link_us-s">Sản phẩm Bán chạy</a>
                       </li>
@@ -499,13 +499,13 @@
             <img src="{{ asset('assets/images/logo.png') }}" alt="SurfsideMedia" class="logo_image d-block" />
             </a>
           </div>
-          <p class="footer-address">123 Beach Avenue, Surfside City, CA 00000</p>
-          <p class="m-0"><strong class="fw-medium">contact@surfsidemedia.in</strong></p>
-          <p><strong class="fw-medium">+1 000-000-0000</strong></p>
+          <p class="footer-address">Thị trấn Mậu A, Huyện Văn Yên, Tỉnh Yên Bái, Việt Nam</p>
+          <p class="m-0"><strong class="fw-medium">23010332@st.phenikaa-uni.edu.vn</strong></p>
+          <p><strong class="fw-medium">+84 336-796-128</strong></p>
 
           <ul class="social-links list-unstyled d-flex flex-wrap mb-0">
             <li>
-              <a href="#" class="footer__social-link d-block">
+              <a href="https://www.facebook.com/tudzntg/" class="footer__social-link d-block" target="_blank">
                 <svg class="svg-icon svg-icon_facebook" width="9" height="15" viewBox="0 0 9 15"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="#icon_facebook" />
@@ -521,7 +521,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="footer__social-link d-block">
+              <a href="https://www.instagram.com/tuanh1379/" class="footer__social-link d-block" target="_blank">
                 <svg class="svg-icon svg-icon_instagram" width="14" height="13" viewBox="0 0 14 13"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="#icon_instagram" />
@@ -529,7 +529,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="footer__social-link d-block">
+              <a href="https://www.youtube.com/@REWMe" class="footer__social-link d-block" target="_blank">
                 <svg class="svg-icon svg-icon_youtube" width="16" height="11" viewBox="0 0 16 11"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -549,48 +549,48 @@
         </div>
 
         <div class="footer-column footer-menu mb-4 mb-lg-0">
-          <h6 class="sub-menu__title text-uppercase">Company</h6>
+          <h6 class="sub-menu__title text-uppercase">Quế Văn Yên</h6>
           <ul class="sub-menu__list list-unstyled">
-            <li class="sub-menu__item"><a href="about-2.html" class="menu-link menu-link_us-s">About Us</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Careers</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Affiliates</a></li>
+            <li class="sub-menu__item"><a href="about-2.html" class="menu-link menu-link_us-s">Về Chúng tôi</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Công việc</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Tiếp thị liên kết</a></li>
             <li class="sub-menu__item"><a href="blog_list1.html" class="menu-link menu-link_us-s">Blog</a></li>
-            <li class="sub-menu__item"><a href="contact-2.html" class="menu-link menu-link_us-s">Contact Us</a></li>
+            <li class="sub-menu__item"><a href="contact-2.html" class="menu-link menu-link_us-s">Liên hệ với Chúng tôi</a></li>
           </ul>
         </div>
 
         <div class="footer-column footer-menu mb-4 mb-lg-0">
-          <h6 class="sub-menu__title text-uppercase">Shop</h6>
+          <h6 class="sub-menu__title text-uppercase">Cửa hàng</h6>
           <ul class="sub-menu__list list-unstyled">
             <li class="sub-menu__item"><a href="shop2.html" class="menu-link menu-link_us-s">Sản phẩm Bán chạy</a></li>
             <li class="sub-menu__item"><a href="shop3.html" class="menu-link menu-link_us-s">Accessories</a></li>
             <li class="sub-menu__item"><a href="shop4.html" class="menu-link menu-link_us-s">Men</a></li>
             <li class="sub-menu__item"><a href="shop5.html" class="menu-link menu-link_us-s">Women</a></li>
-            <li class="sub-menu__item"><a href="shop1.html" class="menu-link menu-link_us-s">Shop All</a></li>
+            <li class="sub-menu__item"><a href="shop1.html" class="menu-link menu-link_us-s">Tất cả sản phẩm</a></li>
           </ul>
         </div>
 
         <div class="footer-column footer-menu mb-4 mb-lg-0">
-          <h6 class="sub-menu__title text-uppercase">Help</h6>
+          <h6 class="sub-menu__title text-uppercase">Trợ giúp</h6>
           <ul class="sub-menu__list list-unstyled">
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Customer Service</a></li>
-            <li class="sub-menu__item"><a href="account_dashboard.html" class="menu-link menu-link_us-s">My Account</a>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Dịch vụ Khách hàng</a></li>
+            <li class="sub-menu__item"><a href="account_dashboard.html" class="menu-link menu-link_us-s">Tài khoản của tôi</a>
             </li>
-            <li class="sub-menu__item"><a href="store_location.html" class="menu-link menu-link_us-s">Find a Store</a>
+            <li class="sub-menu__item"><a href="store_location.html" class="menu-link menu-link_us-s">Tìm kiếm cửa hàng</a>
             </li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Legal & Privacy</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Gift Card</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Chính sách & Quyền riêng tư</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Mã giảm giá</a></li>
           </ul>
         </div>
 
         <div class="footer-column footer-menu mb-4 mb-lg-0">
-          <h6 class="sub-menu__title text-uppercase">Categories</h6>
+          <h6 class="sub-menu__title text-uppercase">Phân loại</h6>
           <ul class="sub-menu__list list-unstyled">
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Shirts</a></li>
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Jeans</a></li>
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Shoes</a></li>
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Bags</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Shop All</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Tất cả sản phẩm</a></li>
           </ul>
         </div>
       </div>
@@ -598,10 +598,10 @@
 
     <div class="footer-bottom">
       <div class="container d-md-flex align-items-center">
-        <span class="footer-copyright me-auto">©2024 Surfside Media</span>
+        <span class="footer-copyright me-auto">©2025 Quế Văn Yên</span>
         <div class="footer-settings d-md-flex align-items-center">
-          <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms-conditions.html">Terms &amp;
-            Conditions</a>
+          <a href="privacy-policy.html">Chính sách bảo mật</a> &nbsp;|&nbsp; <a href="terms-conditions.html">Điều khoản &amp;
+          Điều kiện</a>
         </div>
       </div>
     </div>
@@ -639,7 +639,7 @@
             </svg>
             <span class="wishlist-amount d-block position-absolute js-wishlist-count">3</span>
           </div>
-          <span>Wishlist</span>
+          <span>Danh sách mong muốn</span>
         </a>
       </div>
     </div>
