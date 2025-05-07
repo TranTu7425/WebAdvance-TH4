@@ -268,7 +268,7 @@
       </a>
 
       <div class="logo">
-        <a href="index.html">
+        <a href="{{ route('home.index') }}">
         <img src="{{ asset('assets/images/logo.png') }}" alt="Uomo" class="logo_image d-block" />
         </a>
       </div>
@@ -307,7 +307,7 @@
         <div class="overflow-hidden">
           <ul class="navigation__list list-unstyled position-relative">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link">TRANG CHỦ</a>
+              <a href="{{ route('home.index') }}" class="navigation__link">TRANG CHỦ</a>
             </li>
             <li class="navigation__item">
               <a href="shop.html" class="navigation__link">CỬA HÀNG</a>
@@ -388,7 +388,7 @@
     <div class="container">
       <div class="header-desk header-desk_type_1">
         <div class="logo">
-          <a href="index.html">
+          <a href="{{ route('home.index') }}">
           <img src="{{ asset('assets/images/logo.png') }}" alt="Uomo" class="logo_image d-block" />
           </a>
         </div>
@@ -396,7 +396,7 @@
         <nav class="navigation">
           <ul class="navigation__list list-unstyled d-flex">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link">TRANG CHỦ</a>
+              <a href="{{ route('home.index') }}" class="navigation__link">TRANG CHỦ</a>
             </li>
             <li class="navigation__item">
               <a href="shop.html" class="navigation__link">CỬA HÀNG</a>
@@ -460,14 +460,26 @@
             </div>
           </div>
 
+          @guest
           <div class="header-tools__item hover-container">
-            <a href="login.html" class="header-tools__item">
+            <a href="{{ route('login') }}" class="header-tools__item">
               <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <use href="#icon_user" />
               </svg>
             </a>
           </div>
+          @else
+            <div class="header-tools__item hover-container">
+              <a href="{{ Auth::user()->utype == 'ADM' ? route('admin.index') : route('user.index') }}" class="header-tools__item">
+                <span class="pr-6px">{{ Auth::user()->name }}</span>
+                  <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                  <use href="#icon_user" />
+                </svg>
+              </a>
+            </div>
+          @endguest
 
           <a href="wishlist.html" class="header-tools__item">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -495,7 +507,7 @@
       <div class="row row-cols-lg-5 row-cols-2">
         <div class="footer-column footer-store-info col-12 mb-4 mb-lg-0">
           <div class="logo">
-            <a href="index.html">
+            <a href="{{ route('home.index') }}">
             <img src="{{ asset('assets/images/logo.png') }}" alt="SurfsideMedia" class="logo_image d-block" />
             </a>
           </div>
@@ -611,7 +623,7 @@
   <footer class="footer-mobile container w-100 px-5 d-md-none bg-body">
     <div class="row text-center">
       <div class="col-4">
-        <a href="index.html" class="footer-mobile__link d-flex flex-column align-items-center">
+        <a href="{{ route('home.index') }}{" class="footer-mobile__link d-flex flex-column align-items-center">
           <svg class="d-block" width="18" height="18" viewBox="0 0 18 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <use href="#icon_home" />
@@ -621,7 +633,7 @@
       </div>
 
       <div class="col-4">
-        <a href="index.html" class="footer-mobile__link d-flex flex-column align-items-center">
+        <a href="{{ route('shop.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
           <svg class="d-block" width="18" height="18" viewBox="0 0 18 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <use href="#icon_hanger" />
@@ -631,7 +643,7 @@
       </div>
 
       <div class="col-4">
-        <a href="index.html" class="footer-mobile__link d-flex flex-column align-items-center">
+        <a href="{{ route('wishlist.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
           <div class="position-relative">
             <svg class="d-block" width="18" height="18" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
