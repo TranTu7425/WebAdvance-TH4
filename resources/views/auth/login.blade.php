@@ -8,7 +8,7 @@
                 <div class="card-body p-5">
                     <div class="text-center mb-4">
                         <h2 class="text-primary fw-bold">{{ __('Đăng Nhập') }}</h2>
-                        <p class="text-muted">Chào mừng bạn đến với Cinnamon Shop</p>
+                        <p class="text-muted">Chào mừng bạn đến với Quế Văn Yên</p>
                     </div>
 
                     @if(session('error'))
