@@ -312,7 +312,7 @@
               <a href="{{ route('home.index') }}" class="navigation__link">TRANG CHỦ</a>
             </li>
             <li class="navigation__item">
-              <a href="shop.html" class="navigation__link">CỬA HÀNG</a>
+              <a href="{{ route('shop.index') }}" class="navigation__link">CỬA HÀNG</a>
             </li>
             <li class="navigation__item">
               <a href="cart.html" class="navigation__link">GIỎ HÀNG</a>
@@ -401,7 +401,7 @@
               <a href="{{ route('home.index') }}" class="navigation__link">TRANG CHỦ</a>
             </li>
             <li class="navigation__item">
-              <a href="shop.html" class="navigation__link">CỬA HÀNG</a>
+              <a href="{{ route('shop.index') }}" class="navigation__link">CỬA HÀNG</a>
             </li>
             <li class="navigation__item">
               <a href="cart.html" class="navigation__link">GIỎ HÀNG</a>
