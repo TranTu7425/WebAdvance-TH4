@@ -3,18 +3,18 @@
 <div class="main-content-inner">
                             <div class="main-content-wrap">
                                 <div class="flex items-center flex-wrap justify-between gap20 mb-27">
-                                    <h3>All Products</h3>
+                                    <h3>Tất cả sản phẩm</h3>
                                     <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                                         <li>
                                             <a href="{{ route('admin.index') }}">
-                                                <div class="text-tiny">Dashboard</div>
+                                                <div class="text-tiny">Bảng điều khiển</div>
                                             </a>
                                         </li>
                                         <li>
                                             <i class="icon-chevron-right"></i>
                                         </li>
                                         <li>
-                                            <div class="text-tiny">All Products</div>
+                                            <div class="text-tiny">Tất cả sản phẩm</div>
                                         </li>
                                     </ul>
                                 </div>
@@ -24,7 +24,7 @@
                                         <div class="wg-filter flex-grow">
                                             <form class="form-search">
                                                 <fieldset class="name">
-                                                    <input type="text" placeholder="Search here..." class="" name="name"
+                                                    <input type="text" placeholder="Tìm kiếm..." class="" name="name"
                                                         tabindex="2" value="" aria-required="true" required="">
                                                 </fieldset>
                                                 <div class="button-submit">
@@ -33,7 +33,7 @@
                                             </form>
                                         </div>
                                         <a class="tf-button style-1 w208" href="{{ route('admin.product.add') }}"><i
-                                                class="icon-plus"></i>Add new</a>
+                                                class="icon-plus"></i>Thêm mới</a>
                                     </div>
                                     <div class="table-responsive">
                                         @if (session('status'))
@@ -43,16 +43,16 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Name</th>
-                                                    <th>Price</th>
-                                                    <th>SalePrice</th>
+                                                    <th>Tên</th>
+                                                    <th>Giá</th>
+                                                    <th>Giá khuyến mãi</th>
                                                     <th>SKU</th>
-                                                    <th>Category</th>
-                                                    <th>Brand</th>
-                                                    <th>Featured</th>
-                                                    <th>Stock</th>
-                                                    <th>Quantity</th>
-                                                    <th>Action</th>
+                                                    <th>Danh mục</th>
+                                                    <th>Thương hiệu</th>
+                                                    <th>Nổi bật</th>
+                                                    <th>Tình trạng</th>
+                                                    <th>Số lượng</th>
+                                                    <th>Thao tác</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -73,7 +73,7 @@
                                                     <td>{{ $product->SKU }}</td>
                                                     <td>{{ $product->category->name }}</td>
                                                     <td>{{ $product->brand->name }}</td>
-                                                    <td>{{ $product->featured == 0 ? "No" : "Yes" }}</td>
+                                                    <td>{{ $product->featured == 0 ? "Không" : "Có" }}</td>
                                                     <td>{{ $product->stock_status }}</td>
                                                     <td>{{ $product->quantity }}</td>
                                                     <td>
@@ -120,10 +120,10 @@
             e.preventDefault();
             var form = $(this).closest('form');
             swal({
-                title: 'Are you sure?',
-                text: 'Are you sure you want to delete this product?',
+                title: 'Bạn có chắc chắn?',
+                text: 'Bạn có chắc chắn muốn xóa sản phẩm này?',
                 type: 'warning',
-                buttons: ['Cancel', 'Delete'],
+                buttons: ['Hủy', 'Xóa'],
                 confirmButtonColor: '#3085d6',
             }).then(function(result){
                 if(result){
