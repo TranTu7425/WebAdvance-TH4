@@ -23,7 +23,7 @@
     <section class="shop-main container d-flex pt-4 pt-xl-5">
       <div class="shop-sidebar side-sticky bg-body" id="shopFilter">
         <div class="aside-header d-flex d-lg-none align-items-center">
-          <h3 class="text-uppercase fs-6 mb-0">Filter By</h3>
+          <h3 class="text-uppercase fs-6 mb-0">Lọc Theo</h3>
           <button class="btn-close-lg js-close-aside btn-close-aside ms-auto"></button>
         </div>
 
@@ -34,7 +34,7 @@
             <h5 class="accordion-header" id="accordion-heading-1">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse"
                 data-bs-target="#accordion-filter-1" aria-expanded="true" aria-controls="accordion-filter-1">
-                Product Categories
+                Danh Mục Sản Phẩm
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path
@@ -71,7 +71,7 @@
             <h5 class="accordion-header" id="accordion-heading-1">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse"
                 data-bs-target="#accordion-filter-2" aria-expanded="true" aria-controls="accordion-filter-2">
-                Color
+                Màu Sắc
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path
@@ -106,7 +106,7 @@
             <h5 class="accordion-header" id="accordion-heading-size">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse"
                 data-bs-target="#accordion-filter-size" aria-expanded="true" aria-controls="accordion-filter-size">
-                Sizes
+                Kích Thước
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path
@@ -137,7 +137,7 @@
             <h5 class="accordion-header" id="accordion-heading-brand">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse"
                 data-bs-target="#accordion-filter-brand" aria-expanded="true" aria-controls="accordion-filter-brand">
-                Brands
+                Thương Hiệu
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path
@@ -174,7 +174,7 @@
             <h5 class="accordion-header mb-2" id="accordion-heading-price">
               <button class="accordion-button p-0 border-0 fs-5 text-uppercase" type="button" data-bs-toggle="collapse"
                 data-bs-target="#accordion-filter-price" aria-expanded="true" aria-controls="accordion-filter-price">
-                Price
+                Giá
                 <svg class="accordion-button__icon type2" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
                   <g aria-hidden="true" stroke="none" fill-rule="evenodd">
                     <path
@@ -189,11 +189,11 @@
                 data-slider-max="500" data-slider-step="5" data-slider-value="[{{$min_price}},{{$max_price}}]" data-currency="$" />
               <div class="price-range__info d-flex align-items-center mt-2">
                 <div class="me-auto">
-                  <span class="text-secondary">Min Price: </span>
+                  <span class="text-secondary">Giá Tối Thiểu: </span>
                   <span class="price-range__min">$1</span>
                 </div>
                 <div>
-                  <span class="text-secondary">Max Price: </span>
+                  <span class="text-secondary">Giá Tối Đa: </span>
                   <span class="price-range__max">$500</span>
                 </div>
               </div>
@@ -224,15 +224,14 @@
                   <div class="slideshow-text container p-3 p-xl-5">
                     <h2
                       class="text-uppercase section-title fw-normal mb-3 animate animate_fade animate_btt animate_delay-2">
-                      Women's <br /><strong>ACCESSORIES</strong></h2>
-                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Accessories are the best way to
-                      update your look. Add a title edge with new styles and new colors, or go for timeless pieces.</h6>
+                      Phụ Kiện <br /><strong>NỮ</strong></h2>
+                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Phụ kiện là cách tốt nhất để cập nhật diện mạo của bạn. Thêm một chút phong cách với những mẫu mã và màu sắc mới, hoặc chọn những món đồ thời trang vượt thời gian.</h6>
                   </div>
                 </div>
                 <div class="slide-split_media position-relative">
                   <div class="slideshow-bg" style="background-color: #f5e6e0;">
                     <img loading="lazy" src="assets/images/shop/shop_banner3.jpg" width="630" height="450"
-                      alt="Women's accessories" class="slideshow-bg__img object-fit-cover" />
+                      alt="Phụ kiện nữ" class="slideshow-bg__img object-fit-cover" />
                   </div>
                 </div>
               </div>
@@ -245,15 +244,14 @@
                   <div class="slideshow-text container p-3 p-xl-5">
                     <h2
                       class="text-uppercase section-title fw-normal mb-3 animate animate_fade animate_btt animate_delay-2">
-                      Women's <br /><strong>ACCESSORIES</strong></h2>
-                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Accessories are the best way to
-                      update your look. Add a title edge with new styles and new colors, or go for timeless pieces.</h6>
+                      Phụ Kiện <br /><strong>NỮ</strong></h2>
+                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Phụ kiện là cách tốt nhất để cập nhật diện mạo của bạn. Thêm một chút phong cách với những mẫu mã và màu sắc mới, hoặc chọn những món đồ thời trang vượt thời gian.</h6>
                   </div>
                 </div>
                 <div class="slide-split_media position-relative">
                   <div class="slideshow-bg" style="background-color: #f5e6e0;">
                     <img loading="lazy" src="assets/images/shop/shop_banner3.jpg" width="630" height="450"
-                      alt="Women's accessories" class="slideshow-bg__img object-fit-cover" />
+                      alt="Phụ kiện nữ" class="slideshow-bg__img object-fit-cover" />
                   </div>
                 </div>
               </div>
@@ -266,15 +264,14 @@
                   <div class="slideshow-text container p-3 p-xl-5">
                     <h2
                       class="text-uppercase section-title fw-normal mb-3 animate animate_fade animate_btt animate_delay-2">
-                      Women's <br /><strong>ACCESSORIES</strong></h2>
-                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Accessories are the best way to
-                      update your look. Add a title edge with new styles and new colors, or go for timeless pieces.</h6>
+                      Phụ Kiện <br /><strong>NỮ</strong></h2>
+                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Phụ kiện là cách tốt nhất để cập nhật diện mạo của bạn. Thêm một chút phong cách với những mẫu mã và màu sắc mới, hoặc chọn những món đồ thời trang vượt thời gian.</h6>
                   </div>
                 </div>
                 <div class="slide-split_media position-relative">
                   <div class="slideshow-bg" style="background-color: #f5e6e0;">
                     <img loading="lazy" src="assets/images/shop/shop_banner3.jpg" width="630" height="450"
-                      alt="Women's accessories" class="slideshow-bg__img object-fit-cover" />
+                      alt="Phụ kiện nữ" class="slideshow-bg__img object-fit-cover" />
                   </div>
                 </div>
               </div>
@@ -291,9 +288,9 @@
 
         <div class="d-flex justify-content-between mb-4 pb-md-2">
           <div class="breadcrumb mb-0 d-none d-md-block flex-grow-1">
-            <a href="{{route('home.index')}}" class="menu-link menu-link_us-s text-uppercase fw-medium">Home</a>
+            <a href="{{route('home.index')}}" class="menu-link menu-link_us-s text-uppercase fw-medium">Trang Chủ</a>
             <span class="breadcrumb-separator menu-link fw-medium ps-1 pe-1">/</span>
-            <a href="#" class="menu-link menu-link_us-s text-uppercase fw-medium">The Shop</a>
+            <a href="#" class="menu-link menu-link_us-s text-uppercase fw-medium">Cửa Hàng</a>
           </div>
 
           <div class="shop-acs d-flex align-items-center justify-content-between justify-content-md-end flex-grow-1">
@@ -305,17 +302,17 @@
             </select>
 
             <select class="shop-acs__select form-select w-auto border-0 py-0 order-1 order-md-0" aria-label="Sort Items" name="orderby" id="orderby">
-              <option value="-1" {{ $order == -1 ? 'selected' : '' }}>Default Sorting</option>
-              <option value="1" {{ $order == 1 ? 'selected' : '' }}>Date, new to old</option>
-              <option value="2" {{ $order == 2 ? 'selected' : '' }}>Date, old to new</option>
-              <option value="3" {{ $order == 3 ? 'selected' : '' }}>Price, low to high</option>
-              <option value="4" {{ $order == 4 ? 'selected' : '' }}>Price, high to low</option>
+              <option value="-1" {{ $order == -1 ? 'selected' : '' }}>Sắp xếp mặc định</option>
+              <option value="1" {{ $order == 1 ? 'selected' : '' }}>Ngày, mới đến cũ</option>
+              <option value="2" {{ $order == 2 ? 'selected' : '' }}>Ngày, cũ đến mới</option>
+              <option value="3" {{ $order == 3 ? 'selected' : '' }}>Giá, thấp đến cao</option>
+              <option value="4" {{ $order == 4 ? 'selected' : '' }}>Giá, cao đến thấp</option>
             </select>
 
             <div class="shop-asc__seprator mx-3 bg-light d-none d-md-block order-md-0"></div>
 
             <div class="col-size align-items-center order-1 d-none d-lg-flex">
-              <span class="text-uppercase fw-medium me-2">View</span>
+              <span class="text-uppercase fw-medium me-2">Xem</span>
               <button class="btn-link fw-medium me-2 js-cols-size" data-target="products-grid" data-cols="2">2</button>
               <button class="btn-link fw-medium me-2 js-cols-size" data-target="products-grid" data-cols="3">3</button>
               <button class="btn-link fw-medium js-cols-size" data-target="products-grid" data-cols="4">4</button>
@@ -327,7 +324,7 @@
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="#icon_filter" />
                 </svg>
-                <span class="text-uppercase fw-medium d-inline-block align-middle">Filter</span>
+                <span class="text-uppercase fw-medium d-inline-block align-middle">Lọc</span>
               </button>
             </div>
           </div>
@@ -359,7 +356,7 @@
                     </svg></span>
                 </div>
                 @if (Cart::instance('cart')->content()->where('id', $product->id)->count() > 0)
-                <a href="{{ route('cart.index') }}" class="pc__atc btn anim_appear-bottom btn position-absolute border-0 text-uppercase fw-medium btn-warning mb-3">View Cart</a>
+                <a href="{{ route('cart.index') }}" class="pc__atc btn anim_appear-bottom btn position-absolute border-0 text-uppercase fw-medium btn-warning mb-3">Xem Giỏ Hàng</a>
                 @else
                 <form name="addtocart-form" method="post" action="{{ route('cart.add') }}">
                   @csrf
@@ -367,7 +364,7 @@
                   <input type="hidden" name="quantity" value="1">
                   <input type="hidden" name="name" value="{{ $product->name }}">
                   <input type="hidden" name="price" value="{{ $product->sale_price == '' ? $product->regular_price : $product->sale_price }}">
-                <button type="submit" class="pc__atc btn anim_appear-bottom btn position-absolute border-0 text-uppercase fw-medium" data-aside="cartDrawer" title="Add To Cart">Add To Cart</button>
+                <button type="submit" class="pc__atc btn anim_appear-bottom btn position-absolute border-0 text-uppercase fw-medium" data-aside="cartDrawer" title="Thêm Vào Giỏ">Thêm Vào Giỏ</button>
                 </form>
                 @endif
               </div>
@@ -402,14 +399,14 @@
                       <use href="#icon_star" />
                     </svg>
                   </div>
-                  <span class="reviews-note text-lowercase text-secondary ms-1">8k+ reviews</span>
+                  <span class="reviews-note text-lowercase text-secondary ms-1">8k+ đánh giá</span>
                 </div>
 
                 @if(Cart::instance('wishlist')->content()->where('id', $product->id)->count() > 0)
                 <form action="{{ route('wishlist.remove.item', ['rowId' => Cart::instance('wishlist')->content()->where('id', $product->id)->first()->rowId]) }}" method="POST">
                   @csrf
                   @method('DELETE')
-                <button type="submit" class="pc__btn-wl position-absolute top-0 end-0 bg-transparent border-0 js-add-wishlist filled-heart" title="Add To Wishlist">
+                <button type="submit" class="pc__btn-wl position-absolute top-0 end-0 bg-transparent border-0 js-add-wishlist filled-heart" title="Thêm Vào Yêu Thích">
                   <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_heart" />
                   </svg>
@@ -422,7 +419,7 @@
                   <input type="hidden" name="name" value="{{ $product->name }}">
                   <input type="hidden" name="price" value="{{ $product->sale_price == '' ? $product->regular_price : $product->sale_price }}">
                   <input type="hidden" name="quantity" value="1">
-                <button type="submit" class="pc__btn-wl position-absolute top-0 end-0 bg-transparent border-0 js-add-wishlist" title="Add To Wishlist">
+                <button type="submit" class="pc__btn-wl position-absolute top-0 end-0 bg-transparent border-0 js-add-wishlist" title="Thêm Vào Yêu Thích">
                   <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="#icon_heart" />
                   </svg>

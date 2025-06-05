@@ -5,18 +5,18 @@
 <main class="pt-90">
     <div class="mb-4 pb-4"></div>
     <section class="shop-checkout container">
-      <h2 class="page-title">Wishlist</h2>
+      <h2 class="page-title">Danh sách yêu thích</h2>
       <div class="shopping-cart">
         @if(Cart::instance('wishlist')->content()->count() > 0)
         <div class="cart-table__wrapper">
           <table class="cart-table">
             <thead>
               <tr>
-                <th>Product</th>
+                <th>Sản phẩm</th>
                 <th></th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Action</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thao tác</th>
                 <th></th>
               </tr>
             </thead>
@@ -32,13 +32,13 @@
                   <div class="shopping-cart__product-item__detail">
                     <h4>{{ $item->name }}</h4>
                     <ul class="shopping-cart__product-item__options">
-                      <li>Color: Yellow</li>
-                      <li>Size: L</li>
+                      <li>Màu sắc: Vàng</li>
+                      <li>Kích thước: L</li>
                     </ul>
                   </div>
                 </td>
                 <td>
-                  <span class="shopping-cart__product-price">${{ $item->price }}</span>
+                  <span class="shopping-cart__product-price">{{ number_format($item->price) }}đ</span>
                 </td>
                 <td>
                   {{ $item->qty }}
@@ -50,7 +50,7 @@
                             <form action="{{ route('wishlist.move.to.cart', ['rowId' => $item->rowId]) }}" method="POST" id="move-to-cart-form-{{ $item->id }}">
                             @csrf
                             @method('POST')
-                                <button type="submit" class="btn btn-sm btn-warning">Move to Cart</button>
+                                <button type="submit" class="btn btn-sm btn-warning">Chuyển vào giỏ hàng</button>
                     </form>
                     </div>
                     <div class="col-md-6">
@@ -75,15 +75,15 @@
             <form action="{{ route('wishlist.clear') }}" method="POST" id="clear-wishlist-form">
             @csrf
             @method('DELETE')
-                <button type="submit" class="btn btn-light">CLEAR WISHLIST</button>
+                <button type="submit" class="btn btn-light">XÓA DANH SÁCH YÊU THÍCH</button>
             </form>
           </div>
         </div>
         @else
             <div class="row">
                 <div class="col-md-12">
-                    <p>No items in wishlist</p>
-                    <a href="{{ route('shop.index') }}" class="btn btn-info">Continue Shopping</a>
+                    <p>Không có sản phẩm trong danh sách yêu thích</p>
+                    <a href="{{ route('shop.index') }}" class="btn btn-info">Tiếp tục mua sắm</a>
                 </div>
             </div>
         @endif

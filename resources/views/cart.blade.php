@@ -1,30 +1,38 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+  .text-success {
+    color:rgb(0, 105, 56);
+  }
+  .text-danger {
+    color: #dc3545;
+  }
+</style>
 <main class="pt-90">
     <div class="mb-4 pb-4"></div>
     <section class="shop-checkout container">
-      <h2 class="page-title">Cart</h2>
+      <h2 class="page-title">Giỏ hàng</h2>
       <div class="checkout-steps">
         <a href="javascript:void(0)" class="checkout-steps__item active">
           <span class="checkout-steps__item-number">01</span>
           <span class="checkout-steps__item-title">
-            <span>Shopping Bag</span>
-            <em>Manage Your Items List</em>
+            <span>Giỏ hàng</span>
+            <em>Quản lý danh sách sản phẩm</em>
           </span>
         </a>
         <a href="javascript:void(0)" class="checkout-steps__item">
           <span class="checkout-steps__item-number">02</span>
           <span class="checkout-steps__item-title">
-            <span>Shipping and Checkout</span>
-            <em>Checkout Your Items List</em>
+            <span>Vận chuyển và thanh toán</span>
+            <em>Thanh toán sản phẩm</em>
           </span>
         </a>
         <a href="javascript:void(0)" class="checkout-steps__item">
           <span class="checkout-steps__item-number">03</span>
           <span class="checkout-steps__item-title">
-            <span>Confirmation</span>
-            <em>Review And Submit Your Order</em>
+            <span>Xác nhận</span>
+            <em>Xem lại và gửi đơn hàng</em>
           </span>
         </a>
       </div>
@@ -34,11 +42,11 @@
           <table class="cart-table">
             <thead>
               <tr>
-                <th>Product</th>
+                <th>Sản phẩm</th>
                 <th></th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Tổng phụ</th>
                 <th></th>
               </tr>
             </thead>
@@ -54,8 +62,8 @@
                   <div class="shopping-cart__product-item__detail">
                     <h4>{{ $item->name }}</h4>
                     <ul class="shopping-cart__product-item__options">
-                      <li>Color: Yellow</li>
-                      <li>Size: L</li>
+                      <li>Màu sắc: Vàng</li>
+                      <li>Kích thước: L</li>
                     </ul>
                   </div>
                 </td>
@@ -98,52 +106,104 @@
             </tbody>
           </table>
           <div class="cart-table-footer">
-            <form action="#" class="position-relative bg-body">
-              <input class="form-control" type="text" name="coupon_code" placeholder="Coupon Code">
-              <input class="btn-link fw-medium position-absolute top-0 end-0 h-100 px-4" type="submit"
-                value="APPLY COUPON">
+            @if(!Session::has('coupon'))
+            <form action="{{ route('cart.apply.coupon') }}" method="POST" class="position-relative bg-body">
+              @csrf
+              <input class="form-control" type="text" name="coupon_code" placeholder="Mã giảm giá" value="">
+              <input class="btn-link fw-medium position-absolute top-0 end-0 h-100 px-4" type="submit" value="ÁP DỤNG MÃ">
             </form>
+            @else
+            <form action="{{ route('cart.remove.coupon') }}" method="POST" class="position-relative bg-body">
+              @csrf
+              <input class="form-control" type="text" name="coupon_code" placeholder="Mã giảm giá" value="{{ Session::get('coupon')['code'] }} Đã áp dụng!" readonly>
+              <input class="btn-link fw-medium position-absolute top-0 end-0 h-100 px-4" type="submit" value="XÓA MÃ">
+            </form>
+            @endif
             <form method="POST" action="{{ route('cart.clear') }}">
               @csrf
               @method('DELETE')
-              <button class="btn btn-light" type="submit">CLEAR CART</button>
+              <button class="btn btn-light" type="submit">XÓA GIỎ HÀNG</button>
             </form>
+          </div>
+          <div>
+            @if(Session::has('success'))
+              <p class="text-success">{{ Session::get('success') }}</p>
+            @elseif(Session::has('error'))
+              <p class="text-danger">{{ Session::get('error') }}</p>
+            @endif
           </div>
         </div>
         <div class="shopping-cart__totals-wrapper">
           <div class="sticky-content">
             <div class="shopping-cart__totals">
-              <h3>Cart Totals</h3>
+              <h3>Tổng giỏ hàng</h3>
+              @if(Session::has('discounts'))
               <table class="cart-totals">
                 <tbody>
                   <tr>
-                    <th>Subtotal</th>
+                    <th>Tổng phụ</th>
                     <td>{{Cart::instance('cart')->subTotal()}}</td>
                   </tr>
                   <tr>
-                    <th>Shipping</th>
+                    <th>Giảm giá {{Session::get('coupon')['code']}}</th>
+                    <td>{{Session::get('discounts')['discount']}}</td>
+                  </tr>
+                  <tr>
+                    <th>Tổng sau giảm giá</th>
+                    <td>{{Session::get('discounts')['subtotal']}}</td>
+                  </tr>
+                  <tr>
+                    <th>Phí vận chuyển</th>
                     <td>
-                      Free
+                      Miễn phí
                     </td>
                   </tr>
                   <tr>
-                    <th>VAT</th>
+                    <th>Thuế VAT</th>
+                    <td>
+                      {{Session::get('discounts')['tax']}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Tổng cộng</th>
+                    <td>
+                      {{Session::get('discounts')['total']}}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              @else
+              <table class="cart-totals">
+                <tbody>
+                  <tr>
+                    <th>Tổng phụ</th>
+                    <td>{{Cart::instance('cart')->subTotal()}}</td>
+                  </tr>
+                  <tr>
+                    <th>Phí vận chuyển</th>
+                    <td>
+                      Miễn phí
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Thuế VAT</th>
                     <td>
                       {{Cart::instance('cart')->tax()}}
                     </td>
                   </tr>
                   <tr>
-                    <th>Total</th>
+                    <th>Tổng cộng</th>
                     <td>
                       {{Cart::instance('cart')->total()}}
                     </td>
                   </tr>
                 </tbody>
               </table>
+              @endif
             </div>
             <div class="mobile_fixed-btn_wrapper">
               <div class="button-wrapper container">
-                <a href="checkout.html" class="btn btn-primary btn-checkout">PROCEED TO CHECKOUT</a>
+                <a href="{{ route('cart.checkout') }}" class="btn btn-primary btn-checkout">TIẾN HÀNH THANH TOÁN</a>
               </div>
             </div>
           </div>
@@ -151,8 +211,8 @@
         @else
             <div class="row">
                 <div class="col-md-12 text-center pt-5 bp-5>
-                    <p>No item found in your cart</p>
-                    <a href="{{ route('shop.index') }}" class="btn btn-info">Continue Shopping</a>
+                    <p>Không có sản phẩm nào trong giỏ hàng</p>
+                    <a href="{{ route('shop.index') }}" class="btn btn-info">Tiếp tục mua sắm</a>
                 </div>
             </div>
         @endif
