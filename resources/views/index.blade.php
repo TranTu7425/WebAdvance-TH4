@@ -88,62 +88,15 @@
           }
         }'>
         <div class="swiper-wrapper">
+          @foreach($categories as $category)
           <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('assets/images/home/demo3/category_1.png') }}" width="124"
+            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('uploads/categories/') }}/{{ $category->image }}" width="124"
               height="124" alt="" />
             <div class="text-center">
-              <a href="#" class="menu-link fw-medium">Quế<br />Khô</a>
+              <a href="{{ route('shop.index', ['category' => $category->id]) }}" class="menu-link fw-medium">{{ $category->name }}</a>
             </div>
           </div>
-          <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('assets/images/home/demo3/category_2.png') }}" width="124"
-              height="124" alt="" />
-            <div class="text-center">
-              <a href="#" class="menu-link fw-medium">Quế<br />Sáo</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('assets/images/home/demo3/category_3.png') }}" width="124"
-              height="124" alt="" />
-            <div class="text-center">
-              <a href="#" class="menu-link fw-medium">Quế<br />Giống</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('assets/images/home/demo3/category_4.png') }}" width="124"
-              height="124" alt="" />
-            <div class="text-center">
-              <a href="#" class="menu-link fw-medium">Trà<br />Quế</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('assets/images/home/demo3/category_5.png') }}" width="124"
-              height="124" alt="" />
-            <div class="text-center">
-              <a href="#" class="menu-link fw-medium">Ấm<br />Chén</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('assets/images/home/demo3/category_6.png') }}" width="124"
-              height="124" alt="" />
-            <div class="text-center">
-              <a href="#" class="menu-link fw-medium">Quế<br />Thanh</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('assets/images/home/demo3/category_7.png') }}" width="124"
-              height="124" alt="" />
-            <div class="text-center">
-              <a href="#" class="menu-link fw-medium">Kẹo<br />Quế</a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('assets/images/home/demo3/category_8.png') }}" width="124"
-              height="124" alt="" />
-            <div class="text-center">
-              <a href="#" class="menu-link fw-medium">Nước<br />Lau sàn</a>
-            </div>
-          </div>
+          @endforeach
         </div><!-- /.swiper-wrapper -->
       </div><!-- /.swiper-container js-swiper-slider -->
 

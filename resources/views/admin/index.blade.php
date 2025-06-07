@@ -15,7 +15,7 @@
                             </div>
                             <div>
                                 <div class="body-text mb-2">Tổng số đơn hàng</div>
-                                <h4>3</h4>
+                                <h4>{{ $dashboardDatas[0]->Total }}</h4>
                             </div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                             </div>
                             <div>
                                 <div class="body-text mb-2">Tổng số tiền</div>
-                                <h4>481.34</h4>
+                                <h4>{{ $dashboardDatas[0]->TotalAmount }}</h4>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                             </div>
                             <div>
                                 <div class="body-text mb-2">Đơn hàng đang chờ</div>
-                                <h4>3</h4>
+                                <h4>{{ $dashboardDatas[0]->TotalOrdered }}</h4>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                             </div>
                             <div>
                                 <div class="body-text mb-2">Số tiền đơn hàng đang chờ</div>
-                                <h4>481.34</h4>
+                                <h4>{{ $dashboardDatas[0]->TotalOrderedAmount }}</h4>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             </div>
                             <div>
                                 <div class="body-text mb-2">Đơn hàng đã giao</div>
-                                <h4>0</h4>
+                                <h4>{{ $dashboardDatas[0]->TotalDelivered }}</h4>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             </div>
                             <div>
                                 <div class="body-text mb-2">Số tiền đơn hàng đã giao</div>
-                                <h4>0.00</h4>
+                                <h4>{{ $dashboardDatas[0]->TotalDeliveredAmount }}</h4>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                             </div>
                             <div>
                                 <div class="body-text mb-2">Đơn hàng đã hủy</div>
-                                <h4>0</h4>
+                                <h4>{{ $dashboardDatas[0]->TotalCanceled }}</h4>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             </div>
                             <div>
                                 <div class="body-text mb-2">Số tiền đơn hàng đã hủy</div>
-                                <h4>0.00</h4>
+                                <h4>{{ $dashboardDatas[0]->TotalCanceledAmount }}</h4>
                             </div>
                         </div>
                     </div>
@@ -135,56 +135,57 @@
 
         <div class="wg-box">
             <div class="flex items-center justify-between">
-                <h5>Doanh thu</h5>
-                <div class="dropdown default">
-                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <span class="icon-more"><i class="icon-more-horizontal"></i></span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li>
-                            <a href="javascript:void(0);">Tuần này</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">Tuần trước</a>
-                        </li>
-                    </ul>
-                </div>
+                <h5>Doanh thu tháng này</h5>
             </div>
-            <div class="flex flex-wrap gap40">
-                <div>
-                    <div class="mb-2">
-                        <div class="block-legend">
-                            <div class="dot t1"></div>
-                            <div class="text-tiny">Doanh thu</div>
+            <div>
+                <div class="flex flex-wrap gap40 mb-4">
+                    <div>
+                        <div class="mb-2">
+                            <div class="block-legend">
+                                <div class="dot t1"></div>
+                                <div class="text-tiny">Doanh thu</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap10">
+                            <h4>{{ $TotalAmount }}</h4>
                         </div>
                     </div>
-                    <div class="flex items-center gap10">
-                        <h4>$37,802</h4>
-                        <div class="box-icon-trending up">
-                            <i class="icon-trending-up"></i>
-                            <div class="body-title number">0.56%</div>
+                    <div>
+                        <div class="mb-2">
+                            <div class="block-legend">
+                                <div class="dot t2"></div>
+                                <div class="text-tiny">Đang đợi</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap10">
+                            <h4>{{ $TotalOrderedAmount }}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-2">
+                            <div class="block-legend">
+                                <div class="dot t2"></div>
+                                <div class="text-tiny">Đã giao</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap10">
+                            <h4>{{ $TotalDeliveredAmount }}</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-2">
+                            <div class="block-legend">
+                                <div class="dot t2"></div>
+                                <div class="text-tiny">Đã hủy</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap10">
+                            <h4>{{ $TotalCanceledAmount }}</h4>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div class="mb-2">
-                        <div class="block-legend">
-                            <div class="dot t2"></div>
-                            <div class="text-tiny">Đơn hàng</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap10">
-                        <h4>$28,305</h4>
-                        <div class="box-icon-trending up">
-                            <i class="icon-trending-up"></i>
-                            <div class="body-title number">0.56%</div>
-                        </div>
-                    </div>
-                </div>
+                <div id="line-chart-8"></div>
             </div>
-            <div id="line-chart-8"></div>
         </div>
 
     </div>
@@ -194,53 +195,66 @@
             <div class="flex items-center justify-between">
                 <h5>Đơn hàng gần đây</h5>
                 <div class="dropdown default">
-                    <a class="btn btn-secondary dropdown-toggle" href="#">
+                    <a class="btn btn-secondary dropdown-toggle" href="{{ route('admin.orders') }}">
                         <span class="view-all">Xem tất cả</span>
                     </a>
                 </div>
             </div>
             <div class="wg-table table-all-user">
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th style="width: 80px">Mã đơn</th>
-                                <th>Tên</th>
-                                <th class="text-center">Số điện thoại</th>
-                                <th class="text-center">Tạm tính</th>
-                                <th class="text-center">Thuế</th>
-                                <th class="text-center">Tổng cộng</th>
-                                <th class="text-center">Trạng thái</th>
-                                <th class="text-center">Ngày đặt</th>
-                                <th class="text-center">Số lượng</th>
-                                <th class="text-center">Ngày giao</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center">1</td>
-                                <td class="text-center">Divyansh Kumar</td>
-                                <td class="text-center">1234567891</td>
-                                <td class="text-center">$172.00</td>
-                                <td class="text-center">$36.12</td>
-                                <td class="text-center">$208.12</td>
-                                <td class="text-center">đã đặt</td>
-                                <td class="text-center">2024-07-11 00:54:14</td>
-                                <td class="text-center">2</td>
-                                <td></td>
-                                <td class="text-center">
-                                    <a href="#">
-                                        <div class="list-icon-function view-icon">
-                                            <div class="item eye">
-                                                <i class="icon-eye"></i>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <table class="table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width:70px">Mã ĐH</th>
+                                                        <th class="text-center">Tên</th>
+                                                        <th class="text-center">Điện Thoại</th>
+                                                        <th class="text-center">Tạm Tính</th>
+                                                        <th class="text-center">Thuế</th>
+                                                        <th class="text-center">Tổng Cộng</th>
+                                                        <th class="text-center">Trạng Thái</th>
+                                                        <th class="text-center">Ngày Đặt</th>
+                                                        <th class="text-center">Số Lượng</th>
+                                                        <th class="text-center">Ngày Giao</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach($orders as $order)
+                                                    <tr>
+                                                        <td class="text-center">{{ $order->id }}</td>
+                                                        <td class="text-center">{{ $order->user->name }}</td>
+                                                        <td class="text-center">{{ $order->user->phone }}</td>
+                                                        <td class="text-center">{{ $order->subtotal }}</td>
+                                                        <td class="text-center">{{ $order->tax }}</td>
+                                                        <td class="text-center">{{ $order->total }}</td>
+
+                                                        <td class="text-center">
+                                                        @if($order->status == 'delivered')
+                                                            <span class="badge bg-success">Đã Giao</span>
+                                                        
+                                                        @elseif($order->status == 'canceled')
+                                                            <span class="badge bg-danger">Đã Hủy</span>
+
+                                                        @else
+                                                            <span class="badge bg-warning">Đã Đặt</span>
+                                                        @endif
+                                                        </td>
+                                                        <td class="text-center">{{ $order->created_at->format('d/m/Y') }}</td>
+                                                        <td class="text-center">{{ $order->orderItems->count() }}</td>
+                                                        <td class="text-center">{{ $order->delivered_date }}</td>
+                                                        <td class="text-center">
+                                                            <a href="{{ route('admin.order.details', ['order_id' => $order->id]) }}">
+                                                                <div class="list-icon-function view-icon">
+                                                                    <div class="item eye">
+                                                                        <i class="icon-eye"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
                 </div>
             </div>
         </div>
@@ -250,3 +264,104 @@
 
 </div>
 @endsection
+
+@push('scripts')
+<script>
+        (function ($) {
+
+            var tfLineChart = (function () {
+
+                var chartBar = function () {
+
+                    var options = {
+                        series: [{
+                            name: 'Doanh thu',
+                            data: [{{ $AmountM }}]
+                        }, {
+                            name: 'Đang đợi',
+                            data: [{{ $orderedAmountM }}]
+                        },
+                        {
+                            name: 'Đã giao',
+                            data: [{{ $DeliveredAmountM }}]
+                        }, {
+                            name: 'Đã hủy',
+                            data: [{{ $CanceledAmountM }}]
+                        }],
+                        chart: {
+                            type: 'bar',
+                            height: 325,
+                            toolbar: {
+                                show: false,
+                            },
+                        },
+                        plotOptions: {
+                            bar: {
+                                horizontal: false,
+                                columnWidth: '10px',
+                                endingShape: 'rounded'
+                            },
+                        },
+                        dataLabels: {
+                            enabled: false
+                        },
+                        legend: {
+                            show: true,
+                        },
+                        colors: ['#2377FC', '#FFA500', '#078407', '#FF0000'],
+                        stroke: {
+                            show: false,
+                        },
+                        xaxis: {
+                            labels: {
+                                style: {
+                                    colors: '#212529',
+                                },
+                            },
+                            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        },
+                        yaxis: {
+                            show: false,
+                        },
+                        fill: {
+                            opacity: 1
+                        },
+                        tooltip: {
+                            y: {
+                                formatter: function (val) {
+                                    return val;
+                                }
+                            }
+                        }
+                    };
+
+                    chart = new ApexCharts(
+                        document.querySelector("#line-chart-8"),
+                        options
+                    );
+                    if ("#line-chart-8") {
+                        chart.render();
+                    }
+                };
+
+                /* Function ============ */
+                return {
+                    init: function () { },
+
+                    load: function () {
+                        chartBar();
+                    },
+                    resize: function () { },
+                };
+            })();
+
+            jQuery(document).ready(function () { });
+
+            jQuery(window).on("load", function () {
+                tfLineChart.load();
+            });
+
+            jQuery(window).on("resize", function () { });
+        })(jQuery);
+    </script>
+@endpush
