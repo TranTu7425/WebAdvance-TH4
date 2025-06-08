@@ -82,4 +82,13 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
     Route::get('/admin/slide/{id}/edit', [AdminController::class, 'slide_edit'])->name('admin.slide.edit');
     Route::put('/admin/slide/update/', [AdminController::class, 'slide_update'])->name('admin.slide.update');
     Route::delete('/admin/slide/{id}/delete', [AdminController::class, 'slide_delete'])->name('admin.slide.delete');
+
+    Route::get('/admin/search-products', [AdminController::class, 'search_products'])->name('admin.search.products');
+
+    Route::get('/admin/contacts', [AdminController::class, 'contacts'])->name('admin.contacts');
+    Route::delete('/admin/contact/{id}/delete', [AdminController::class, 'contact_delete'])->name('admin.contact.delete');
+
+    Route::get('/contact-us', [HomeController::class, 'contact'])->name('home.contact');
+    Route::post('/contact/store', [HomeController::class, 'contact_store'])->name('home.contact.store');
+    Route::get('/search', [HomeController::class, 'search'])->name('home.search');
 });

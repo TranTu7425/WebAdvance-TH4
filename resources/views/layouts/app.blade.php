@@ -24,6 +24,75 @@
         body {
             font-family: 'Google Sans', sans-serif;
         }
+
+        #box-content-search {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 1000;
+            padding: 16px;
+            display: none;
+        }
+
+        #box-content-search li {
+            list-style: none;
+        }
+
+        #box-content-search .product-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            transition: background-color 0.2s;
+        }
+
+        #box-content-search .product-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        #box-content-search .product-item .image {
+            width: 60px;
+            height: 60px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-right: 16px;
+        }
+
+        #box-content-search .product-item .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #box-content-search .product-item .name {
+            flex: 1;
+        }
+
+        #box-content-search .product-item .name a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        #box-content-search .product-item .name a:hover {
+            color: #007bff;
+        }
+
+        #box-content-search .divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 8px 0;
+        }
     </style>
     @stack("styles")
 </head>
@@ -411,7 +480,7 @@
               <a href="about.html" class="navigation__link">GIỚI THIỆU</a>
             </li>
             <li class="navigation__item">
-              <a href="contact.html" class="navigation__link">LIÊN HỆ</a>
+              <a href="{{ route('home.contact') }}" class="navigation__link">LIÊN HỆ</a>
             </li>
           </ul>
         </nav>
@@ -432,8 +501,7 @@
               <form action="#" method="GET" class="search-field container">
                 <p class="text-uppercase text-secondary fw-medium mb-4">Bạn đang cần gì nhỉ?</p>
                 <div class="position-relative">
-                  <input class="search-field__input search-popup__input w-100 fw-medium" type="text"
-                    name="search-keyword" placeholder="Search products" />
+                  <input class="search-field__input search-popup__input w-100 fw-medium" type="text" name="search-keyword" id="search-keyword" placeholder="Search products" />
                   <button class="btn-icon search-popup__submit" type="submit">
                     <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -444,20 +512,9 @@
                 </div>
 
                 <div class="search-popup__results">
-                  <div class="sub-menu search-suggestion">
-                    <h6 class="sub-menu__title fs-base">Đường dẫn nhanh</h6>
-                    <ul class="sub-menu__list list-unstyled">
-                      <li class="sub-menu__item"><a href="shop2.html" class="menu-link menu-link_us-s">Sản phẩm Bán chạy</a>
-                      </li>
-                      <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Dresses</a></li>
-                      <li class="sub-menu__item"><a href="shop3.html" class="menu-link menu-link_us-s">Accessories</a>
-                      </li>
-                      <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Footwear</a></li>
-                      <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Sweatshirt</a></li>
-                    </ul>
-                  </div>
+                  <ul id="box-content-search"></ul>
 
-                  <div class="search-result row row-cols-5"></div>
+                  
                 </div>
               </form>
             </div>
@@ -674,6 +731,60 @@
   <script src="{{ asset('js/sweetalert.min.js') }}"></script>   
   <script src="{{ asset('assets/js/plugins/swiper.min.js') }}"></script>
   <script src="{{ asset('assets/js/plugins/countdown.js') }}"></script>
+  <script>
+  $(function () {
+  $('#search-keyword').on('keyup', function () {
+    var searchQuery = $(this).val();
+
+    if (searchQuery.trim() === "") {
+      $('#box-content-search').html('').hide(); // Hide results when empty
+      return;
+    }
+
+    $.ajax({
+      url: "{{ route('home.search') }}",
+      type: "GET",
+      data: {
+        query: searchQuery
+      },
+      dataType: "json",
+      success: function (data) {
+        $('#box-content-search').html('');
+        if (data.length > 0) {
+          $.each(data, function (index, item) {
+            var url = "{{ route('shop.product.details', ['product_slug' => ':product_slug_pls']) }}";
+            var link = url.replace(':product_slug_pls', item.slug);
+
+            $("#box-content-search").append(`
+              <li>
+                <ul>
+                  <li class="product-item gap14 mb-10">
+                    <div class="image no-bg">
+                      <img src="/uploads/products/thumbnails/${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="flex items-center justify-between gap20 flex-grow">
+                      <div class="name">
+                        <a href="${link}" class="body-text">${item.name}</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-10">
+                    <div class="divider"></div>
+                  </li>
+                </ul>
+              </li>
+            `);
+          });
+          $('#box-content-search').show(); // Show results if there are any
+        } else {
+          $('#box-content-search').hide(); // Hide if no results
+        }
+      }
+    });
+  });
+});
+</script>
+
   <script src="{{ asset('assets/js/theme.js') }}"></script>
   @stack("scripts")
 </body>

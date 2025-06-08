@@ -17,6 +17,7 @@ use App\Models\OrderItem;
 use App\Models\Transaction;
 use App\Models\Slide;
 use Illuminate\Support\Facades\DB;
+use App\Models\Contact;
 
 
 
@@ -657,5 +658,22 @@ class AdminController extends Controller
         }
         $slide->delete();
         return redirect()->route('admin.slides')->with('status', 'Slide has been deleted successfully!');
+    }
+
+    public function contacts(){
+        $contacts = Contact::orderBy('created_at', 'DESC')->paginate(12);
+        return view('admin.contacts', compact('contacts'));
+    }
+
+    public function contact_delete($id){
+        $contact = Contact::find($id);
+        $contact->delete();
+        return redirect()->route('admin.contacts')->with('status', 'Contact has been deleted successfully!');
+    }
+
+    public function search_products(Request $request){
+        $query = $request->input('query');
+        $results = Product::where('name', 'like', "%{$query}%")->get()->take(10);
+        return response()->json($results);
     }
 }
