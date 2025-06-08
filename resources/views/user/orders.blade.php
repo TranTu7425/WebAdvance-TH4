@@ -69,7 +69,7 @@
 <main class="pt-90" style="padding-top: 0px;">
     <div class="mb-4 pb-4"></div>
     <section class="my-account container">
-        <h2 class="page-title">Orders</h2>
+        <h2 class="page-title">Đơn Hàng</h2>
         <div class="row">
             <div class="col-lg-2">
                 @include('user.account-nav')
@@ -81,23 +81,22 @@
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 80px">OrderNo</th>
-                                    <th>Name</th>
-                                    <th class="text-center">Phone</th>
-                                    <th class="text-center">Subtotal</th>
-                                    <th class="text-center">Tax</th>
-                                    <th class="text-center">Total</th>
-                                    
-                                    <th class="text-center">Status</th>
-                                    <th class="text-center">Order Date</th>
-                                    <th class="text-center">Items</th>
-                                    <th class="text-center">Delivered On</th>
+                                    <th style="width: 80px">Mã Đơn</th>
+                                    <th>Tên</th>
+                                    <th class="text-center">Điện Thoại</th>
+                                    <th class="text-center">Tạm Tính</th>
+                                    <th class="text-center">Thuế</th>
+                                    <th class="text-center">Tổng Cộng</th>
+                                    <th class="text-center">Trạng Thái</th>
+                                    <th class="text-center">Ngày Đặt</th>
+                                    <th class="text-center">Số Món</th>
+                                    <th class="text-center">Ngày Giao</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($orders as $order)
-                                                                <tr>
+                                <tr>
                                     <td class="text-center">{{ $order->id }}</td>  
                                     <td class="text-center">{{ $order->name }}</td>
                                     <td class="text-center">{{ $order->phone }}</td>
@@ -106,14 +105,12 @@
                                     <td class="text-center">{{ $order->total }}</td>
                                     <td class="text-center">
                                     @if($order->status == 'delivered')
-                                                            <span class="badge bg-success">Delivered</span>
-                                                        
-                                                        @elseif($order->status == 'canceled')
-                                                            <span class="badge bg-danger">Canceled</span>
-
-                                                        @else
-                                                            <span class="badge bg-warning">Ordered</span>
-                                                        @endif
+                                        <span class="badge bg-success">Đã Giao</span>
+                                    @elseif($order->status == 'canceled')
+                                        <span class="badge bg-danger">Đã Hủy</span>
+                                    @else
+                                        <span class="badge bg-warning">Đã Đặt</span>
+                                    @endif
                                     </td>
                                     <td class="text-center">{{ $order->created_at }}</td>
                                     <td class="text-center">{{ $order->orderItems->count() }}</td>
@@ -129,8 +126,6 @@
                                     </td>
                                 </tr>
                                 @endforeach
-                                 
-                          
                             </tbody>
                         </table>                
                     </div>
@@ -138,10 +133,8 @@
                 <div class="divider"></div>
                 <div class="flex items-center justify-between flex-wrap gap10 wgp-pagination">       
                     {{ $orders->links('pagination::bootstrap-5') }}
-                    
                 </div>
             </div>
-            
         </div>
     </section>
 </main>

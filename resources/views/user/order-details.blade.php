@@ -101,7 +101,7 @@
 <main class="pt-90" style="padding-top: 0px;">
     <div class="mb-4 pb-4"></div>
     <section class="my-account container">
-        <h2 class="page-title">Order Details</h2>
+        <h2 class="page-title">Chi tiết đơn hàng</h2>
         <div class="row">
             <div class="col-lg-2">
                 @include('user.account-nav')
@@ -113,10 +113,10 @@
                                 
                                         <div class="row">
                                             <div class="col-md-6">
-                                            <h5>Ordered Details</h5>
+                                            <h5>Thông tin đơn hàng</h5>
                                             </div>
                                             <div class="col-md-6 text-right">
-                                            <a class="btn btn-sm btn-danger" href="{{ route('user.orders') }}">Back</a>
+                                            <a class="btn btn-sm btn-danger" href="{{ route('user.orders') }}">Quay lại</a>
                                             </div>
                                         </div>
                                     </div>
@@ -126,40 +126,40 @@
                                     @endif
                                         <table class="table table-bordered table-striped table-transaction">
                                                 <tr>
-                                                    <th>Order ID</th>
+                                                    <th>Mã đơn hàng</th>
                                                     <td>{{ $order->id }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Mobile</th>
+                                                    <th>Số điện thoại</th>
                                                     <td>{{ $order->phone }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Zip Code</th>
+                                                    <th>Mã bưu điện</th>
                                                     <td>{{ $order->zip }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Order Date</th>
+                                                    <th>Ngày đặt hàng</th>
                                                     <td>{{ $order->created_at->format('d-m-Y H:i:s') }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Delivery Date</th>
+                                                    <th>Ngày giao hàng</th>
                                                     <td>{{ $order->delivered_date }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Canceled Date</th>
+                                                    <th>Ngày hủy</th>
                                                     <td>{{ $order->canceled_date }}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Order Status</th>
+                                                    <th>Trạng thái đơn hàng</th>
                                                     <td colspan="5">
                                                         @if($order->status == 'delivered')
-                                                            <span class="badge bg-success">Delivered</span>
+                                                            <span class="badge bg-success">Đã giao hàng</span>
                                                         
                                                         @elseif($order->status == 'canceled')
-                                                            <span class="badge bg-danger">Canceled</span>
+                                                            <span class="badge bg-danger">Đã hủy</span>
 
                                                         @else
-                                                            <span class="badge bg-warning">Ordered</span>
+                                                            <span class="badge bg-warning">Đã đặt hàng</span>
                                                         @endif
                                                     </td>
                                                 </tr>
@@ -171,22 +171,22 @@
                                 <div class="wg-box">
                                     <div class="flex items-center justify-between gap10 flex-wrap">
                                         <div class="wg-filter flex-grow">
-                                            <h5>Ordered Items</h5>
+                                            <h5>Sản phẩm đã đặt</h5>
                                         </div>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th>Name</th>
-                                                    <th class="text-center">Price</th>
-                                                    <th class="text-center">Quantity</th>
-                                                    <th class="text-center">SKU</th>
-                                                    <th class="text-center">Category</th>
-                                                    <th class="text-center">Brand</th>
-                                                    <th class="text-center">Options</th>
-                                                    <th class="text-center">Return Status</th>
-                                                    <th class="text-center">Action</th>
+                                                    <th>Tên sản phẩm</th>
+                                                    <th class="text-center">Giá</th>
+                                                    <th class="text-center">Số lượng</th>
+                                                    <th class="text-center">Mã SKU</th>
+                                                    <th class="text-center">Danh mục</th>
+                                                    <th class="text-center">Thương hiệu</th>
+                                                    <th class="text-center">Tùy chọn</th>
+                                                    <th class="text-center">Trạng thái trả hàng</th>
+                                                    <th class="text-center">Thao tác</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -207,7 +207,7 @@
                                                     <td class="text-center">{{$item->product->category->name}}</td>
                                                     <td class="text-center">{{$item->product->brand->name}}</td>
                                                     <td class="text-center">{{$item->options}}</td>
-                                                    <td class="text-center">{{$item->return_status == 0 ? 'No' : 'Yes'}}</td>
+                                                    <td class="text-center">{{$item->return_status == 0 ? 'Không' : 'Có'}}</td>
                                                     <td class="text-center">
                                                         <div class="list-icon-function view-icon">
                                                             <div class="item eye">
@@ -229,7 +229,7 @@
                                 </div>
 
                                 <div class="wg-box mt-5">
-                                    <h5>Shipping Address</h5>
+                                    <h5>Địa chỉ giao hàng</h5>
                                     <div class="my-account__address-item col-md-6">
                                         <div class="my-account__address-item__detail">
                                             <p>{{$order->name}}</p>
@@ -239,38 +239,38 @@
                                             <p>{{$order->landmark}}</p>
                                             <p>{{$order->zip}}</p>
                                             <br>
-                                            <p>Mobile : {{$order->phone}}</p>
+                                            <p>Điện thoại : {{$order->phone}}</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="wg-box mt-5">
-                                    <h5>Transactions</h5>
+                                    <h5>Giao dịch</h5>
                                     <table class="table table-striped table-bordered table-transaction">
                                         <tbody>
                                             <tr>
-                                                <th>Subtotal</th>
+                                                <th>Tạm tính</th>
                                                 <td>{{$order->subtotal}}</td>
-                                                <th>Tax</th>
+                                                <th>Thuế</th>
                                                 <td>{{$order->tax}}</td>
-                                                <th>Discount</th>
+                                                <th>Giảm giá</th>
                                                 <td>{{$order->discount}}</td>
                                             </tr>
                                             <tr>
-                                                <th>Total</th>
+                                                <th>Tổng cộng</th>
                                                 <td>{{$order->total}}</td>
-                                                <th>Payment Mode</th>
+                                                <th>Phương thức thanh toán</th>
                                                 <td>{{$transaction->mode}}</td>
-                                                <th>Status</th>
+                                                <th>Trạng thái</th>
                                                 <td>
                                                     @if($transaction->status == 'approved')
-                                                        <span class="badge bg-success">Approved</span>
+                                                        <span class="badge bg-success">Đã duyệt</span>
                                                     @elseif($transaction->status == 'declined')
-                                                        <span class="badge bg-danger">Declined</span>
+                                                        <span class="badge bg-danger">Từ chối</span>
                                                     @elseif($transaction->status == 'refunded')
-                                                        <span class="badge bg-warning">Refunded</span>
+                                                        <span class="badge bg-warning">Hoàn tiền</span>
                                                     @else
-                                                        <span class="badge bg-warning">Pending</span>
+                                                        <span class="badge bg-warning">Đang chờ</span>
                                                     @endif
                                                 </td>
                                             </tr>
@@ -284,7 +284,7 @@
                                         @csrf
                                         @method('PUT')
                                         <input type="hidden" name="order_id" value="{{$order->id}}" />
-                                        <button type="button" class="btn btn-danger cancel-order">Cancel Order</button>
+                                        <button type="button" class="btn btn-danger cancel-order">Hủy đơn hàng</button>
                                     </form>
                                 </div>
                                 @endif
@@ -303,10 +303,10 @@
             e.preventDefault();
             var form = $(this).closest('form');
             swal({
-                title: 'Are you sure?',
-                text: 'Are you sure you want to cancel this order?',
+                title: 'Bạn có chắc chắn?',
+                text: 'Bạn có chắc chắn muốn hủy đơn hàng này?',
                 type: 'warning',
-                buttons: ['Cancel', 'Cancel Order'],
+                buttons: ['Hủy', 'Xác nhận hủy'],
                 confirmButtonColor: '#3085d6',
             }).then(function(result){
                 if(result){
