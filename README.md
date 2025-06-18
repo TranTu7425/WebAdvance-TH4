@@ -119,6 +119,21 @@
  **Giao diện cài đặt tài khoản quản trị viên:**
 <img src="public/assets/images/giaodien/caidat.png"/>
 
+## Giao diện người dùng/khách:
+**Giao diện trang chủ:**
+<img src="public/assets/images/giaodien/trangchu.png"/>
+ **Giao diện cửa hàng:**
+<img src="public/assets/images/giaodien/cuahang.png"/>
+ **Giao diện thông tin sản phẩm:**
+<img src="public/assets/images/giaodien/spham.png"/>
+ **Giao diện giỏ hàng:**
+<img src="public/assets/images/giaodien/giohang.png"/>
+ **Giao diện liên hệ hỗ trợ:**
+<img src="public/assets/images/giaodien/lienhe.png"/>
+ **Giao diện giới thiệu cửa hàng:**
+<img src="public/assets/images/giaodien/gioithieu.png"/>
+ **Giao diện bảng điều khiển tài khoản người dùng:**
+<img src="public/assets/images/giaodien/user1.png"/>
 
 ## 🚀 Yêu cầu hệ thống
 - PHP >= 8.1
