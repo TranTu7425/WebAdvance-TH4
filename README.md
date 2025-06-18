@@ -131,7 +131,7 @@
  **Giao diện liên hệ hỗ trợ:**
 <img src="public/assets/images/giaodien/lienhe.png"/>
  **Giao diện giới thiệu cửa hàng:**
-<img src="public/assets/images/giaodien/gioithieu.png"/>
+<img src="public/assets/images/giaodien/giothieu.png"/>
  **Giao diện bảng điều khiển tài khoản người dùng:**
 <img src="public/assets/images/giaodien/user1.png"/>
 
