@@ -58,40 +58,40 @@
 
 ## 📦 Tính năng chính
 - **Xác thực người dùng**
-  - Đăng ký tài khoản
-  - Đăng nhập/Đăng xuất
-  - Quản lý thông tin cá nhân
-  - Quản lý địa chỉ giao hàng
+  - Đăng ký tài khoản: Cho phép người dùng tạo tài khoản mới với email và mật khẩu, kèm theo xác thực email để đảm bảo tính bảo mật. Hệ thống cũng hỗ trợ đăng ký qua mạng xã hội như Google, Facebook.
+  - Đăng nhập/Đăng xuất: Cung cấp giao diện đăng nhập thân thiện với người dùng, hỗ trợ "Remember me" và khôi phục mật khẩu qua email. Tính năng đăng xuất an toàn với xác nhận phiên làm việc.
+  - Quản lý thông tin cá nhân: Người dùng có thể cập nhật thông tin cá nhân, thay đổi mật khẩu, và quản lý các tùy chọn bảo mật tài khoản. Hệ thống lưu lịch sử thay đổi để theo dõi.
+  - Quản lý địa chỉ giao hàng: Cho phép thêm nhiều địa chỉ giao hàng, đặt địa chỉ mặc định, và chỉnh sửa/xóa địa chỉ. Tích hợp bản đồ để chọn vị trí chính xác.
 
 - **Quản lý sản phẩm**
-  - Hiển thị danh sách sản phẩm theo danh mục
-  - Tìm kiếm và lọc sản phẩm
-  - Chi tiết sản phẩm với hình ảnh
-  - Quản lý thương hiệu (Brands)
-  - Quản lý danh mục (Categories)
+  - Hiển thị danh sách sản phẩm theo danh mục: Trang danh mục sản phẩm được thiết kế với bố cục lưới, hỗ trợ phân trang và sắp xếp theo nhiều tiêu chí. Mỗi sản phẩm hiển thị hình ảnh, tên, giá và các thông tin cơ bản.
+  - Tìm kiếm và lọc sản phẩm: Công cụ tìm kiếm thông minh với gợi ý từ khóa, lọc theo giá, kích thước, màu sắc và các thuộc tính khác. Kết quả tìm kiếm được cập nhật realtime.
+  - Chi tiết sản phẩm với hình ảnh: Trang chi tiết sản phẩm hiển thị đầy đủ thông tin, hình ảnh chất lượng cao với chế độ xem 360 độ, mô tả chi tiết, đánh giá từ người dùng và sản phẩm liên quan.
+  - Quản lý thương hiệu (Brands): Hệ thống quản lý thương hiệu cho phép thêm, sửa, xóa thông tin thương hiệu, logo và mô tả. Mỗi thương hiệu có trang riêng hiển thị tất cả sản phẩm.
+  - Quản lý danh mục (Categories): Cấu trúc danh mục đa cấp, cho phép tạo danh mục con và sắp xếp thứ tự hiển thị. Mỗi danh mục có thể tùy chỉnh giao diện và SEO.
 
 - **Giỏ hàng & Thanh toán**
-  - Thêm/Xóa sản phẩm vào giỏ
-  - Cập nhật số lượng sản phẩm
-  - Áp dụng mã giảm giá
-  - Thanh toán an toàn
-  - Quản lý địa chỉ giao hàng
+  - Thêm/Xóa sản phẩm vào giỏ: Giỏ hàng thông minh cho phép thêm nhiều sản phẩm, lưu trữ tạm thời và đồng bộ giữa các thiết bị. Hỗ trợ thêm sản phẩm nhanh từ danh sách yêu thích.
+  - Cập nhật số lượng sản phẩm: Giao diện trực quan để điều chỉnh số lượng, tự động cập nhật tổng tiền và kiểm tra tồn kho realtime. Cảnh báo khi vượt quá số lượng có sẵn.
+  - Áp dụng mã giảm giá: Hệ thống mã giảm giá linh hoạt với nhiều loại (phần trăm, số tiền cố định), điều kiện áp dụng và thời hạn sử dụng. Tự động tính toán giá sau khi áp dụng mã.
+  - Thanh toán an toàn: Tích hợp nhiều cổng thanh toán (VNPay, Momo, thẻ tín dụng) với giao thức bảo mật SSL. Quy trình thanh toán đơn giản, nhanh chóng và an toàn.
+  - Quản lý địa chỉ giao hàng: Cho phép chọn địa chỉ giao hàng từ danh sách đã lưu hoặc nhập địa chỉ mới. Tự động tính phí vận chuyển dựa trên địa chỉ và phương thức giao hàng.
 
 - **Quản lý đơn hàng**
-  - Theo dõi trạng thái đơn hàng
-  - Lịch sử đơn hàng
-  - Xuất hóa đơn
-  - Quản lý giao hàng
+  - Theo dõi trạng thái đơn hàng: Hệ thống cập nhật realtime trạng thái đơn hàng, gửi thông báo qua email và SMS. Khách hàng có thể theo dõi chi tiết quá trình xử lý đơn hàng.
+  - Lịch sử đơn hàng: Lưu trữ toàn bộ lịch sử đơn hàng với khả năng tìm kiếm và lọc theo nhiều tiêu chí. Hiển thị chi tiết từng đơn hàng và trạng thái tương ứng.
+  - Xuất hóa đơn: Tạo hóa đơn điện tử với đầy đủ thông tin theo quy định, hỗ trợ xuất file PDF và gửi qua email. Tích hợp chữ ký số cho hóa đơn chính thức.
+  - Quản lý giao hàng: Theo dõi vị trí giao hàng realtime, tích hợp với các đơn vị vận chuyển. Tự động cập nhật trạng thái giao hàng và thông báo cho khách hàng.
 
 - **Trang quản trị**
-  - Dashboard thống kê doanh thu
-  - Quản lý sản phẩm và tồn kho
-  - Quản lý đơn hàng và trạng thái
-  - Quản lý người dùng
-  - Quản lý mã giảm giá
-  - Quản lý slider trang chủ
-  - Quản lý liên hệ
-  - Cài đặt hệ thống
+  - Dashboard thống kê doanh thu: Bảng điều khiển trực quan hiển thị doanh thu theo thời gian thực, biểu đồ phân tích xu hướng, và các chỉ số KPI quan trọng. Hỗ trợ xuất báo cáo chi tiết.
+  - Quản lý sản phẩm và tồn kho: Giao diện quản lý sản phẩm toàn diện với khả năng thêm, sửa, xóa sản phẩm, quản lý tồn kho, và theo dõi lịch sử thay đổi. Tích hợp tính năng import/export dữ liệu.
+  - Quản lý đơn hàng và trạng thái: Hệ thống quản lý đơn hàng tập trung, cho phép cập nhật trạng thái, xử lý đơn hàng, và tương tác với khách hàng. Tích hợp tính năng in đơn hàng và gửi thông báo.
+  - Quản lý người dùng: Quản lý thông tin người dùng, phân quyền, và theo dõi hoạt động. Hỗ trợ khóa/mở khóa tài khoản và xử lý các vấn đề bảo mật.
+  - Quản lý mã giảm giá: Tạo và quản lý các chương trình khuyến mãi, mã giảm giá với nhiều loại và điều kiện áp dụng. Theo dõi hiệu quả của các chương trình khuyến mãi.
+  - Quản lý slider trang chủ: Giao diện kéo thả để tạo và quản lý slider trang chủ, hỗ trợ nhiều loại slider và hiệu ứng. Tích hợp tính năng lên lịch hiển thị.
+  - Quản lý liên hệ: Hệ thống quản lý tin nhắn và yêu cầu từ khách hàng, phân loại và ưu tiên xử lý. Tích hợp tính năng trả lời tự động và gửi email thông báo.
+  - Cài đặt hệ thống: Giao diện cấu hình toàn diện cho các thiết lập hệ thống, bao gồm cài đặt chung, thanh toán, vận chuyển, và tích hợp bên thứ ba. Hỗ trợ sao lưu và khôi phục cài đặt.
 
 ## UML của dự án
 **Sơ đồ cấu trúc (Class Diagram)**
