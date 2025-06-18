@@ -47,7 +47,7 @@
 <div class="container mw-1620 bg-white border-radius-10">
   <div class="mb-3 mb-xl-5 pt-1 pb-4"></div>
   <section class="category-carousel container">
-    <h2 class="section-title text-center mb-3 pb-xl-2 mb-xl-4">CÓ THỂ BẠN CŨNG THÍCH</h2>
+    <h2 class="section-title text-center mb-3 pb-xl-2 mb-xl-4 special-title">CÓ THỂ BẠN CŨNG THÍCH</h2>
 
     <div class="position-relative">
       <div class="swiper-container js-swiper-slider" data-settings='{
@@ -90,7 +90,7 @@
         <div class="swiper-wrapper">
           @foreach($categories as $category)
           <div class="swiper-slide">
-            <img loading="lazy" class="w-100 h-auto mb-3" src="{{ asset('uploads/categories/') }}/{{ $category->image }}" width="124"
+            <img loading="lazy" class="w-100 h-auto mb-3 rounded-circle" src="{{ asset('uploads/categories/') }}/{{ $category->image }}" width="124"
               height="124" alt="" />
             <div class="text-center">
               <a href="{{ route('shop.index', ['category' => $category->id]) }}" class="menu-link fw-medium">{{ $category->name }}</a>
@@ -118,7 +118,7 @@
   <div class="mb-3 mb-xl-5 pt-1 pb-4"></div>
 
   <section class="hot-deals container">
-    <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">Deals HỜI - LỢI không tưởng</h2>
+    <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4 special-title">Deals HỜI - LỢI không tưởng</h2>
     <div class="row">
       <div
         class="col-md-6 col-lg-4 col-xl-20per d-flex align-items-center flex-column justify-content-center py-4 align-items-md-start">
@@ -200,9 +200,9 @@
                   <div class="product-card__price d-flex">
                     <span class="money price text-secondary">
                     @if ($product->sale_price)
-                      <s>{{ $product->regular_price }}</s> ${{ $product->sale_price }}
+                      <s>{{ number_format($product->regular_price) }}₫</s> {{ number_format($product->sale_price) }}₫
                     @else
-                      ${{ $product->regular_price }}
+                      {{ number_format($product->regular_price) }}₫
                     @endif
                     </span>
                   </div>
@@ -224,26 +224,26 @@
     <div class="row">
       <div class="col-md-6">
         <div class="category-banner__item border-radius-10 mb-5">
-          <img loading="lazy" class="h-auto" src="{{ asset('assets/images/home/demo3/category_9.jpg') }}" width="690" height="665"
+          <img loading="lazy" class="h-auto" style="border-radius: 10px;" src="{{ asset('assets/images/home/demo3/category_9.jpg') }}" width="690" height="665"
             alt="" />
           <div class="category-banner__item-mark">
-            Chỉ 35,000₫
+            Chỉ 635,000₫
           </div>
           <div class="category-banner__item-content">
-            <h3 class="mb-0">Nước rửa chén Mori Diamond</h3>
+            <h3 class="mb-0">Túi xách Phenikaa Shoulder</h3>
             <a href="#" class="btn-link default-underline text-uppercase fw-medium">Mua ngay</a>
           </div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="category-banner__item border-radius-10 mb-5">
-          <img loading="lazy" class="h-auto" src="{{ asset('assets/images/home/demo3/category_10.jpg') }}" width="690" height="665"
+          <img loading="lazy" class="h-auto" style="border-radius: 10px;" src="{{ asset('assets/images/home/demo3/category_10.jpg') }}" width="690" height="665"
             alt="" />
           <div class="category-banner__item-mark">
             Chỉ 85.000₫
           </div>
           <div class="category-banner__item-content">
-            <h3 class="mb-0">Dầu Gội Quế - Hương Quế Trà Bồng</h3>
+            <h3 class="mb-0">Nón lưỡi trai Phenikaa Cap</h3>
             <a href="#" class="btn-link default-underline text-uppercase fw-medium">Mua ngay</a>
           </div>
         </div>
@@ -254,7 +254,7 @@
   <div class="mb-3 mb-xl-5 pt-1 pb-4"></div>
 
   <section class="products-grid container">
-    <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4">Sản phẩm nổi bật</h2>
+    <h2 class="section-title text-center mb-3 pb-xl-3 mb-xl-4 special-title">Sản phẩm nổi bật</h2>
 
     <div class="row">
       @foreach($featuredProducts as $product)
@@ -272,9 +272,9 @@
             <div class="product-card__price d-flex align-items-center">
               <span class="money price text-secondary">
                 @if ($product->sale_price)
-                  <s>{{ $product->regular_price }}</s> ${{ $product->sale_price }}
+                  <s>{{ number_format($product->regular_price) }}₫</s> {{ number_format($product->sale_price) }}₫
                 @else
-                  ${{ $product->regular_price }}
+                  {{ number_format($product->regular_price) }}₫
                 @endif
               </span>
             </div>
@@ -287,7 +287,7 @@
     </div><!-- /.row -->
 
     <div class="text-center mt-2">
-      <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="#">Xem thêm</a>
+      <a class="btn-link btn-link_lg default-underline text-uppercase fw-medium" href="{{ route('shop.index') }}">Xem thêm</a>
     </div>
   </section>
 </div>

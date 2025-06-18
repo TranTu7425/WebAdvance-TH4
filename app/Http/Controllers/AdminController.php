@@ -18,6 +18,8 @@ use App\Models\Transaction;
 use App\Models\Slide;
 use Illuminate\Support\Facades\DB;
 use App\Models\Contact;
+use App\Models\Setting;
+use Illuminate\Support\Facades\Hash;
 
 
 
@@ -36,7 +38,7 @@ class AdminController extends Controller
                                         sum(if(status='ordered',1,0)) As TotalOrdered,
                                         sum(if(status='delivered',1,0)) As TotalDelivered,
                                         sum(if(status='canceled',1,0)) As TotalCanceled
-                                        From Orders
+                                        From orders
                                         ");
         
         $monthlyDatas = DB::select("SELECT M.id As MonthNo, M.name As MonthName,
@@ -50,7 +52,7 @@ class AdminController extends Controller
                                         sum(if(status='ordered',total,0)) As TotalOrderedAmount,
                                         sum(if(status='delivered',total,0)) As TotalDeliveredAmount,
                                         sum(if(status='canceled',total,0)) As TotalCanceledAmount
-                                        From Orders WHERE YEAR(created_at)=YEAR(NOW()) GROUP BY YEAR(created_at), MONTH(created_at), DATE_FORMAT(created_at, '%b')
+                                        From orders WHERE YEAR(created_at)=YEAR(NOW()) GROUP BY YEAR(created_at), MONTH(created_at), DATE_FORMAT(created_at, '%b')
                                         Order By MONTH(created_at)) D On D.MonthNo=M.id");  
                                     
         $AmountM = implode(',', collect($monthlyDatas)->pluck('TotalAmount')->toArray());
@@ -267,8 +269,8 @@ class AdminController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'slug' => 'required|unique:products,slug',
-            'short_description' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
+            'short_description' => 'required|string',
+            'description' => 'required|string',
             'regular_price' => 'required|numeric|min:0',
             'sale_price' => 'required|numeric|min:0',
             'SKU' => 'required|string|max:255',
@@ -360,8 +362,8 @@ class AdminController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'slug' => 'required|unique:products,slug,'.$request->id,
-            'short_description' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
+            'short_description' => 'required|string',
+            'description' => 'required|string',
             'regular_price' => 'required|numeric|min:0',
             'sale_price' => 'required|numeric|min:0',
             'SKU' => 'required|string|max:255',
@@ -608,11 +610,8 @@ class AdminController extends Controller
     public function GenerateSlideThumbailsImage($image, $imageName)
     {
         $destinationPath = public_path('uploads/slides');
-        $img = Image :: read($image->path());
-        $img->cover(400,690,"top");
-        $img->resize(400,690,function($constraint){
-        $constraint->aspectRatio();
-        })->save($destinationPath.'/'.$imageName);
+        $img = Image::read($image->path());
+        $img->save($destinationPath.'/'.$imageName);
     }
 
     public function slide_edit($id){
@@ -675,5 +674,61 @@ class AdminController extends Controller
         $query = $request->input('query');
         $results = Product::where('name', 'like', "%{$query}%")->get()->take(10);
         return response()->json($results);
+    }
+
+    public function settings()
+    {
+        $settings = Setting::first();
+        return view('admin.setting', compact('settings'));
+    }
+
+    public function settings_update(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:10',
+            'email' => 'required|email|max:255',
+            'old_password' => 'required_with:new_password',
+            'new_password' => 'required_with:old_password|min:8|confirmed',
+        ]);
+
+        $settings = Setting::first();
+        if (!$settings) {
+            $settings = new Setting();
+        }
+
+        $settings->name = $request->name;
+        $settings->phone = $request->phone;
+        $settings->email = $request->email;
+        $settings->save();
+
+        // Handle password change if provided
+        if ($request->filled('old_password')) {
+            if (!Hash::check($request->old_password, auth()->user()->password)) {
+                return back()->withErrors(['old_password' => 'The old password is incorrect']);
+            }
+
+            auth()->user()->update([
+                'password' => Hash::make($request->new_password)
+            ]);
+        }
+
+        return redirect()->route('admin.settings')->with('status', 'Settings have been updated successfully!');
+    }
+
+    public function users()
+    {
+        $users = \App\Models\User::orderBy('created_at', 'DESC')->paginate(12);
+        return view('admin.users', compact('users'));
+    }
+
+    public function user_delete($id)
+    {
+        $user = \App\Models\User::find($id);
+        if ($user) {
+            $user->delete();
+            return redirect()->route('admin.users')->with('status', 'User has been deleted successfully!');
+        }
+        return redirect()->route('admin.users')->with('error', 'User not found!');
     }
 }

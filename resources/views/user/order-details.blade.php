@@ -60,7 +60,7 @@
 
     .table> :not(caption)>tr>th {
       padding: 0.625rem 1.5rem .25rem !important;
-      background-color: #6a6e51 !important;
+      background-color:rgb(0, 190, 190) !important;
     }
 
     .table-bordered>:not(caption)>*>* {
@@ -95,7 +95,7 @@
     .table-bordered> :not(caption)>tr>th,
     .table-bordered> :not(caption)>tr>td {
       border-width: 1px 1px;
-      border-color: #6a6e51;
+      border-color:rgb(0, 190, 190);
     }
   </style>
 <main class="pt-90" style="padding-top: 0px;">

@@ -152,14 +152,14 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a href="users.html" class="">
+                                    <a href="{{ route('admin.users') }}" class="">
                                         <div class="icon"><i class="icon-user"></i></div>
                                         <div class="text">Người Dùng</div>
                                     </a>
                                 </li>
 
                                 <li class="menu-item">
-                                    <a href="settings.html" class="">
+                                    <a href="{{ route('admin.settings') }}" class="">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Cài Đặt</div>
                                     </a>
@@ -170,7 +170,7 @@
                                         
                                         @csrf
                                         <a href="{{ route('logout') }}" class="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            <div class="icon"><i class="icon-settings"></i></div>
+                                            <div class="icon"><i class="icon-log-out"></i></div>
                                             <div class="text">Đăng Xuất</div>
                                     </a>
                                     </form>
@@ -289,8 +289,8 @@
                                                     <img src="images/avatar/user-1.png" alt="">
                                                 </span>
                                                 <span class="flex flex-column">
-                                                    <span class="body-title mb-2">Kristin Watson</span>
-                                                    <span class="text-tiny">Admin</span>
+                                                    <span class="body-title mb-2">Trần Anh Tú</span>
+                                                    <span class="text-tiny">Quản trị viên</span>
                                                 </span>
                                             </span>
                                         </button>
@@ -348,7 +348,7 @@
                         @yield("content")
 
                         <div class="bottom-page">
-                            <div class="body-text">Bản quyền © Quế Văn Yên</div>
+                            <div class="body-text">Bản quyền © Phenikaa Fashion Shop</div>
                         </div>
                     </div>
 

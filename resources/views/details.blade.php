@@ -5,6 +5,37 @@
   .filled-heart{
     color: #d76b67;
   }
+  
+  /* Màu cho giá sản phẩm sau khi giảm */
+  .current-price {
+    color: #d76b67;
+  }
+  
+  /* Màu cho nút thêm vào giỏ hàng */
+  .btn-primary {
+    background-color: #ff4d2e !important;
+    border-color: #ff4d2e !important;
+  }
+  .btn-primary:hover {
+    background-color: #e63946 !important;
+    border-color: #e63946 !important;
+  }
+  
+  /* Màu cho các nút tab */
+  .nav-link_underscore {
+    color: #ff4d2e!important;
+  }
+  .nav-link_underscore:hover,
+  .nav-link_underscore.active {
+    color: #39539A !important;
+  }
+  
+  /* Màu cho tiêu đề sản phẩm liên quan */
+  .h3.text-uppercase strong {
+    color: #ff4d2e;
+  }
+  
+
 </style>
 <main class="pt-90">
     <div class="mb-md-1 pb-md-3"></div>
@@ -106,12 +137,17 @@
           <div class="product-single__price">
             <span class="current-price">
                 @if ($product->sale_price)
-                    <s>{{ $product->regular_price }}</s> ${{ $product->sale_price }}
+                    <s>{{ number_format($product->regular_price) }}đ</s> {{ number_format($product->sale_price) }}đ
                 @else
-                    ${{ $product->regular_price }}
+                    {{ number_format($product->regular_price) }}đ
                 @endif
             </span>
           </div>
+          @if ($product->sale_price)
+            <div class="mt-2">
+                <img src="{{ asset('assets/images/sale.gif') }}" alt="Ưu đãi sốc" style="width:100%;max-width:545px; margin-bottom: 30px;">
+            </div>
+          @endif
           <div class="product-single__short-desc">
             <p>{{$product->short_description}}</p>
           </div>
@@ -385,7 +421,7 @@
     <section class="products-carousel container">
       <h2 class="h3 text-uppercase mb-4 pb-xl-2 mb-xl-4">Sản phẩm <strong>Liên quan</strong></h2>
 
-      <div id="related_products" class="position-relative">
+      <div id="related_products" class="position-relative you-may-like">
         <div class="swiper-container js-swiper-slider" data-settings='{
             "autoplay": false,
             "slidesPerView": 4,
@@ -449,9 +485,9 @@
                 <div class="product-card__price d-flex">
                   <span class="money price">
                     @if ($product->sale_price)
-                      <s>{{ $product->regular_price }}</s> ${{ $related_product->sale_price }}
+                      <s>{{ number_format($product->regular_price) }}đ</s> {{ number_format($related_product->sale_price) }}đ
                     @else
-                      ${{ $product->regular_price }}
+                      {{ number_format($product->regular_price) }}đ
                     @endif
                   </span>
                 </div>

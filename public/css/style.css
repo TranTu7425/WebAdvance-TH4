@@ -6308,4 +6308,14 @@ select.h40 {
   }
 }
 
+.btn-orange {
+    background-color: #ff4500 !important;
+    border-color: #ff4500 !important;
+}
+
+.btn-orange:hover {
+    background-color: #e63e00 !important;
+    border-color: #e63e00 !important;
+}
+
 /*# sourceMappingURL=style.css.map */

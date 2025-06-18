@@ -55,4 +55,9 @@ class HomeController extends Controller
         })->get()->take(10);
         return response()->json($results);
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

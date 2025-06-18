@@ -1,0 +1,111 @@
+/* About Page Styles */
+.about-us__content {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+}
+
+.page-title {
+    color: #1a237e; /* Xanh đậm */
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: #ff5722; /* Cam đỏ */
+}
+
+h3 {
+    color: #1a237e;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #ff5722;
+}
+
+h5 {
+    color: #1a237e;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.content-wrapper {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.image-wrapper img {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+
+
+/* Animation cho các phần tử */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-us__content > * {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .content-wrapper {
+        margin-top: 2rem;
+    }
+} 

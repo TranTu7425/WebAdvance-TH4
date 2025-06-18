@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Phenikaa Fashion Shop - Thời trang sành điệu'),
 
     /*
     |--------------------------------------------------------------------------

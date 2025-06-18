@@ -18,4 +18,14 @@ class Product extends Model
     {
         return $this->belongsTo(Brand::class, 'brand_id');
     }
+
+    public function coupons()
+    {
+        return $this->hasMany(Coupon::class);
+    }
+
+    public function slides()
+    {
+        return $this->hasMany(Slide::class);
+    }
 }

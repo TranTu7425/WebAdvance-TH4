@@ -7,9 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Quế Văn Yên - Khát vọng vươn xa') }}</title>
+    <title>{{ config('app.name', 'Phenikaa Fashion Shop - Thời trang sành điệu') }}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="Quế Văn Yên" />
+    <meta name="author" content="Phenikaa Fashion Shop" />
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -56,17 +56,20 @@
         }
 
         #box-content-search .product-item .image {
-            width: 60px;
-            height: 60px;
-            border-radius: 6px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             overflow: hidden;
-            margin-right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #box-content-search .product-item .image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 50%;
         }
 
         #box-content-search .product-item .name {
@@ -92,6 +95,138 @@
             height: 1px;
             background-color: #eee;
             margin: 8px 0;
+        }
+
+        #header {
+          padding-top: 2px;
+          padding-bottom: 2px;
+          background-color: #39539A !important;
+        }
+
+        .header-mobile.header_sticky,
+        .header-mobile__navigation,
+        .header-tools,
+        .navigation {
+          background-color: #39539A !important;
+        }
+
+        .navigation__link {
+          color: white !important;
+        }
+
+        .logo__image {
+          max-width: 150px;
+          height: auto;
+        }
+
+        .footer {
+          background-color: #333 !important;
+          color: white !important;
+        }
+
+        .footer .sub-menu__title {
+          color: white !important;
+        }
+
+        .footer .menu-link {
+          color: #ccc !important;
+        }
+
+        .footer .menu-link:hover {
+          color: white !important;
+        }
+
+        .footer-bottom {
+          background-color: #222 !important;
+          color: white !important;
+        }
+
+        .footer-bottom a {
+          color: #ccc !important;
+        }
+
+        .footer-bottom a:hover {
+          color: white !important;
+        }
+
+        .footer-mobile {
+          background-color: #333 !important;
+        }
+
+        .footer-mobile__link {
+          color: white !important;
+        }
+
+        .header-desk {
+          min-height: 48px;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        /* Đổi màu icon header sang trắng */
+        .header-tools svg,
+        .header-tools__item svg,
+        .header-desk svg,
+        .header-mobile svg,
+        .header-mobile__navigation svg {
+          color: #fff !important;
+          fill: #fff !important;
+          stroke: #fff !important;
+        }
+        .header-tools__item span,
+        .header-tools__item .pr-6px {
+          color: #fff !important;
+        }
+
+        .special-title {
+          color: #39539A !important;
+          transition: color 0.2s;
+          font-weight: bold !important;
+        }
+        .special-title:hover {
+          color: #ff5722 !important;
+        }
+
+        .swiper-wrapper-1 img{
+          border-radius: 50% !important;
+          object-fit: cover !important;
+          width: 100px !important;   /* hoặc kích thước bạn muốn */
+          height: 100px !important;  /* hoặc kích thước bạn muốn */
+        }
+        /* Chỉ bo tròn ảnh ở phần "Có thể bạn cũng thích" */
+        .you-may-like .swiper-wrapper-1 img {
+          border-radius: 50% !important;
+          object-fit: cover !important;
+          width: 100px !important;
+          height: 100px !important;
+        }
+
+        .service-info-bar {
+          background: #1a237e; /* Xanh đậm */
+        }
+        .service-info-bar .fw-bold {
+          font-size: 1.1rem;
+        }
+        .service-info-bar svg {
+          color: #fff;
+          display: block;
+          margin: 0 auto 8px auto;
+        }
+
+        .service-col-border {
+          border-right: 1.5px solid #fff;
+        }
+        @media (max-width: 767.98px) {
+          .service-col-border {
+            border-right: none;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+          }
+        }
+        .footer-mobile__link span {
+          white-space: nowrap;
+          font-size: 10px;
         }
     </style>
     @stack("styles")
@@ -320,16 +455,6 @@
         fill="currentColor" />
     </symbol>
   </svg>
-  <style>
-    #header {
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-
-    .logo__image {
-      max-width: 220px;
-    }
-  </style>
   <div class="header-mobile header_sticky">
     <div class="container d-flex align-items-center h-100">
       <a class="mobile-nav-activator d-block position-relative" href="#">
@@ -345,12 +470,15 @@
         </a>
       </div>
 
-      <a href="#" class="header-tools__item header-tools__cart js-open-aside" data-aside="cartDrawer">
-        <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <use href="#icon_cart" />
-        </svg>
-        <span class="cart-amount d-block position-absolute js-cart-items-count">3</span>
-      </a>
+      <a href="{{ route('cart.index') }}" class="header-tools__item header-tools__cart">
+            <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon_cart" />
+            </svg>
+            @if(Cart::instance('cart')->content()->count() > 0)
+            <span class="cart-amount d-block position-absolute js-cart-items-count">{{ Cart::instance('cart')->content()->count() }}</span>
+            @endif
+          </a>
     </div>
 
     <nav
@@ -359,7 +487,7 @@
         <form action="#" method="GET" class="search-field position-relative mt-4 mb-3">
           <div class="position-relative">
             <input class="search-field__input w-100 border rounded-1" type="text" name="search-keyword"
-              placeholder="Search products" />
+              placeholder="Tìm kiếm sản phẩm" />
             <button class="btn-icon search-popup__submit pb-0 me-2" type="submit">
               <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -388,10 +516,10 @@
               <a href="{{ route('cart.index') }}" class="navigation__link">GIỎ HÀNG</a>
             </li>
             <li class="navigation__item">
-              <a href="about.html" class="navigation__link">GIỚI THIỆU</a>
+              <a href="{{ route('home.about') }}" class="navigation__link">GIỚI THIỆU</a>
             </li>
             <li class="navigation__item">
-              <a href="contact.html" class="navigation__link">LIÊN HỆ</a>
+              <a href="{{ route('home.contact') }}" class="navigation__link">LIÊN HỆ</a>
             </li>
           </ul>
         </div>
@@ -399,11 +527,25 @@
 
       <div class="border-top mt-auto pb-2">
         <div class="customer-links container mt-4 mb-2 pb-1">
-          <svg class="d-inline-block align-middle" width="20" height="20" viewBox="0 0 20 20" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon_user" />
-          </svg>
-          <span class="d-inline-block ms-2 text-uppercase align-middle fw-medium">Tài khoản</span>
+          @auth
+            @if(Auth::user()->utype === 'ADM')
+              <a href="{{ route('admin.index') }}" class="text-decoration-none text-dark">
+                <svg class="d-inline-block align-middle" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use href="#icon_user" />
+                </svg>
+                <span class="d-inline-block ms-2 text-uppercase align-middle fw-medium">Quản trị viên</span>
+              </a>
+            @else
+              <a href="{{ route('user.index') }}" class="text-decoration-none text-dark">
+                <svg class="d-inline-block align-middle" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use href="#icon_user" />
+                </svg>
+                <span class="d-inline-block ms-2 text-uppercase align-middle fw-medium">Tài khoản</span>
+              </a>
+            @endif
+          @endauth
         </div>
 
 
@@ -477,7 +619,7 @@
               <a href="{{ route('cart.index') }}" class="navigation__link">GIỎ HÀNG</a>
             </li>
             <li class="navigation__item">
-              <a href="about.html" class="navigation__link">GIỚI THIỆU</a>
+              <a href="{{ route('home.about') }}" class="navigation__link">GIỚI THIỆU</a>
             </li>
             <li class="navigation__item">
               <a href="{{ route('home.contact') }}" class="navigation__link">LIÊN HỆ</a>
@@ -501,7 +643,7 @@
               <form action="#" method="GET" class="search-field container">
                 <p class="text-uppercase text-secondary fw-medium mb-4">Bạn đang cần gì nhỉ?</p>
                 <div class="position-relative">
-                  <input class="search-field__input search-popup__input w-100 fw-medium" type="text" name="search-keyword" id="search-keyword" placeholder="Search products" />
+                  <input class="search-field__input search-popup__input w-100 fw-medium" type="text" name="search-keyword" id="search-keyword" placeholder="Tìm kiếm sản phẩm" />
                   <button class="btn-icon search-popup__submit" type="submit">
                     <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
@@ -567,6 +709,40 @@
     @yield("content")
 
   <hr class="mt-5 text-secondary" />
+  <div class="service-info-bar text-white py-4">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12 col-md-3 mb-3 mb-md-0 service-col-border">
+          <div>
+            <svg width="32" height="32" fill="currentColor" class="mb-2"><use href="#icon_shield"/></svg>
+            <div class="fw-bold">7 NGÀY ĐỔI SẢN PHẨM NGUYÊN GIÁ</div>
+            <div>Đổi trả sản phẩm trong 7 ngày</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 mb-3 mb-md-0 service-col-border">
+          <div>
+            <svg width="32" height="32" fill="currentColor" class="mb-2"><use href="#icon_headphone"/></svg>
+            <div class="fw-bold">HOTLINE 0336796128</div>
+            <div>8h00 - 17h00, T2 - T7 (Giờ hành chính)</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 mb-3 mb-md-0 service-col-border">
+          <div>
+            <svg width="32" height="32" fill="currentColor" class="mb-2"><use href="#icon_hanger"/></svg>
+            <div class="fw-bold">HỆ THỐNG CỬA HÀNG</div>
+            <div>120 cửa hàng trên toàn hệ thống</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div>
+            <svg width="32" height="32" fill="currentColor" class="mb-2"><use href="#icon_shipping"/></svg>
+            <div class="fw-bold">VẬN CHUYỂN</div>
+            <div>Miễn phí vận chuyển toàn quốc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer footer_type_2">
     <div class="footer-middle container">
       <div class="row row-cols-lg-5 row-cols-2">
@@ -576,14 +752,14 @@
             <img src="{{ asset('assets/images/logo.png') }}" alt="SurfsideMedia" class="logo_image d-block" />
             </a>
           </div>
-          <p class="footer-address">Thị trấn Mậu A, Huyện Văn Yên, Tỉnh Yên Bái, Việt Nam</p>
+          <p class="footer-address">Trường Đại Học Phenikaa, P. Nguyễn Trác, Yên Nghĩa, Hà Đông, Hà Nội, Việt Nam</p>
           <p class="m-0"><strong class="fw-medium">23010332@st.phenikaa-uni.edu.vn</strong></p>
           <p><strong class="fw-medium">+84 336-796-128</strong></p>
 
           <ul class="social-links list-unstyled d-flex flex-wrap mb-0">
             <li>
               <a href="https://www.facebook.com/tudzntg/" class="footer__social-link d-block" target="_blank">
-                <svg class="svg-icon svg-icon_facebook" width="9" height="15" viewBox="0 0 9 15"
+                <svg class="svg-icon svg-icon_facebook" width="9" height="15"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="#icon_facebook" />
                 </svg>
@@ -591,7 +767,7 @@
             </li>
             <li>
               <a href="#" class="footer__social-link d-block">
-                <svg class="svg-icon svg-icon_twitter" width="14" height="13" viewBox="0 0 14 13"
+                <svg class="svg-icon svg-icon_twitter" width="14" height="13"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="#icon_twitter" />
                 </svg>
@@ -599,7 +775,7 @@
             </li>
             <li>
               <a href="https://www.instagram.com/tuanh1379/" class="footer__social-link d-block" target="_blank">
-                <svg class="svg-icon svg-icon_instagram" width="14" height="13" viewBox="0 0 14 13"
+                <svg class="svg-icon svg-icon_instagram" width="14" height="13"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="#icon_instagram" />
                 </svg>
@@ -607,16 +783,16 @@
             </li>
             <li>
               <a href="https://www.youtube.com/@REWMe" class="footer__social-link d-block" target="_blank">
-                <svg class="svg-icon svg-icon_youtube" width="16" height="11" viewBox="0 0 16 11"
+                <svg class="svg-icon svg-icon_youtube" width="16" height="11"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M15.0117 1.8584C14.8477 1.20215 14.3281 0.682617 13.6992 0.518555C12.5234 0.19043 7.875 0.19043 7.875 0.19043C7.875 0.19043 3.19922 0.19043 2.02344 0.518555C1.39453 0.682617 0.875 1.20215 0.710938 1.8584C0.382812 3.00684 0.382812 5.46777 0.382812 5.46777C0.382812 5.46777 0.382812 7.90137 0.710938 9.07715C0.875 9.7334 1.39453 10.2256 2.02344 10.3896C3.19922 10.6904 7.875 10.6904 7.875 10.6904C7.875 10.6904 12.5234 10.6904 13.6992 10.3896C14.3281 10.2256 14.8477 9.7334 15.0117 9.07715C15.3398 7.90137 15.3398 5.46777 15.3398 5.46777C15.3398 5.46777 15.3398 3.00684 15.0117 1.8584ZM6.34375 7.68262V3.25293L10.2266 5.46777L6.34375 7.68262Z" />
-                </svg>
-              </a>
+              </svg>
+            </a>
             </li>
             <li>
               <a href="#" class="footer__social-link d-block">
-                <svg class="svg-icon svg-icon_pinterest" width="14" height="15" viewBox="0 0 14 15"
+                <svg class="svg-icon svg-icon_pinterest" width="14" height="15"
                   xmlns="http://www.w3.org/2000/svg">
                   <use href="#icon_pinterest" />
                 </svg>
@@ -626,24 +802,24 @@
         </div>
 
         <div class="footer-column footer-menu mb-4 mb-lg-0">
-          <h6 class="sub-menu__title text-uppercase">Quế Văn Yên</h6>
+          <h6 class="sub-menu__title text-uppercase">Phenikaa Fashion Shop</h6>
           <ul class="sub-menu__list list-unstyled">
-            <li class="sub-menu__item"><a href="about-2.html" class="menu-link menu-link_us-s">Về Chúng tôi</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Công việc</a></li>
+            <li class="sub-menu__item"><a href="{{ route('home.about') }}" class="menu-link menu-link_us-s">Về Chúng tôi</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Cơ hội nghề nghiệp</a></li>
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Tiếp thị liên kết</a></li>
-            <li class="sub-menu__item"><a href="blog_list1.html" class="menu-link menu-link_us-s">Blog</a></li>
-            <li class="sub-menu__item"><a href="contact-2.html" class="menu-link menu-link_us-s">Liên hệ với Chúng tôi</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Tin tức</a></li>
+            <li class="sub-menu__item"><a href="{{ route('home.contact') }}" class="menu-link menu-link_us-s">Liên hệ với Chúng tôi</a></li>
           </ul>
         </div>
 
         <div class="footer-column footer-menu mb-4 mb-lg-0">
           <h6 class="sub-menu__title text-uppercase">Cửa hàng</h6>
           <ul class="sub-menu__list list-unstyled">
-            <li class="sub-menu__item"><a href="shop2.html" class="menu-link menu-link_us-s">Sản phẩm Bán chạy</a></li>
-            <li class="sub-menu__item"><a href="shop3.html" class="menu-link menu-link_us-s">Accessories</a></li>
-            <li class="sub-menu__item"><a href="shop4.html" class="menu-link menu-link_us-s">Men</a></li>
-            <li class="sub-menu__item"><a href="shop5.html" class="menu-link menu-link_us-s">Women</a></li>
-            <li class="sub-menu__item"><a href="shop1.html" class="menu-link menu-link_us-s">Tất cả sản phẩm</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Sản phẩm Bán chạy</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Phụ kiện</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Nam</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Nữ</a></li>
+            <li class="sub-menu__item"><a href="{{ route('shop.index') }}" class="menu-link menu-link_us-s">Tất cả sản phẩm</a></li>
           </ul>
         </div>
 
@@ -651,31 +827,58 @@
           <h6 class="sub-menu__title text-uppercase">Trợ giúp</h6>
           <ul class="sub-menu__list list-unstyled">
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Dịch vụ Khách hàng</a></li>
-            <li class="sub-menu__item"><a href="account_dashboard.html" class="menu-link menu-link_us-s">Tài khoản của tôi</a>
-            </li>
-            <li class="sub-menu__item"><a href="store_location.html" class="menu-link menu-link_us-s">Tìm kiếm cửa hàng</a>
-            </li>
+            <li class="sub-menu__item"><a href="{{ route('user.index') }}" class="menu-link menu-link_us-s">Tài khoản của tôi</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Tìm kiếm cửa hàng</a></li>
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Chính sách & Quyền riêng tư</a></li>
             <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Mã giảm giá</a></li>
           </ul>
+          <div class="footer-account mt-2">
+            @guest
+                <a href="{{ route('login') }}" class="menu-link menu-link_us-s">Đăng nhập</a>
+            @else
+                <a href="{{ Auth::user()->utype == 'ADM' ? route('admin.index') : route('user.index') }}" class="menu-link menu-link_us-s">
+                    {{ Auth::user()->name }}
+                </a>
+            @endguest
+          </div>
         </div>
 
         <div class="footer-column footer-menu mb-4 mb-lg-0">
           <h6 class="sub-menu__title text-uppercase">Phân loại</h6>
           <ul class="sub-menu__list list-unstyled">
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Shirts</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Jeans</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Shoes</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Bags</a></li>
-            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Tất cả sản phẩm</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Áo sơ mi</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Quần jean</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Giày dép</a></li>
+            <li class="sub-menu__item"><a href="#" class="menu-link menu-link_us-s">Túi xách</a></li>
+            <li class="sub-menu__item"><a href="{{ route('shop.index') }}" class="menu-link menu-link_us-s">Tất cả sản phẩm</a></li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-map">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h6 class="sub-menu__title text-uppercase mb-4">Vị trí của chúng tôi</h6>
+            <div class="map-container" style="height: 400px;">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.7485384583847!2d105.74611147597663!3d20.962611180670315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452efff394ce3%3A0x391a39d4325be464!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBQaGVuaWthYQ!5e0!3m2!1svi!2s!4v1749476813130!5m2!1svi!2s" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="container d-md-flex align-items-center">
-        <span class="footer-copyright me-auto">©2025 Quế Văn Yên</span>
+        <span class="footer-copyright me-auto">©2025 Phenikaa Fashion Shop</span>
         <div class="footer-settings d-md-flex align-items-center">
           <a href="privacy-policy.html">Chính sách bảo mật</a> &nbsp;|&nbsp; <a href="terms-conditions.html">Điều khoản &amp;
           Điều kiện</a>
@@ -687,37 +890,54 @@
 
   <footer class="footer-mobile container w-100 px-5 d-md-none bg-body">
     <div class="row text-center">
-      <div class="col-4">
-        <a href="{{ route('home.index') }}{" class="footer-mobile__link d-flex flex-column align-items-center">
+      <div class="col-3">
+        <a href="{{ route('home.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
           <svg class="d-block" width="18" height="18" viewBox="0 0 18 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <use href="#icon_home" />
           </svg>
-          <span>TRANG CHỦ</span>
+          <span>Trang chủ</span>
         </a>
       </div>
-
-      <div class="col-4">
+      <div class="col-3">
         <a href="{{ route('shop.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
           <svg class="d-block" width="18" height="18" viewBox="0 0 18 18" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <use href="#icon_hanger" />
           </svg>
-          <span>CỬA HÀNG</span>
+          <span>Cửa hàng</span>
         </a>
       </div>
-
-      <div class="col-4">
+      <div class="col-3">
         <a href="{{ route('wishlist.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
           <div class="position-relative">
             <svg class="d-block" width="18" height="18" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <use href="#icon_heart" />
             </svg>
-            <span class="wishlist-amount d-block position-absolute js-wishlist-count">3</span>
+            @if(Cart::instance('wishlist')->content()->count() > 0)
+            <span class="wishlist-amount d-block position-absolute js-cart-items-count">{{ Cart::instance('wishlist')->content()->count() }}</span>
+            @endif
           </div>
-          <span>Yêu thích</span>
+            <span>Yêu thích</span>
         </a>
+      </div>
+      <div class="col-3">
+        @guest
+          <a href="{{ route('login') }}" class="footer-mobile__link d-flex flex-column align-items-center">
+            <svg class="d-block" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon_user" />
+            </svg>
+            <span>Đăng nhập</span>
+          </a>
+        @else
+          <a href="{{ Auth::user()->utype == 'ADM' ? route('admin.index') : route('user.index') }}" class="footer-mobile__link d-flex flex-column align-items-center">
+            <svg class="d-block" width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon_user" />
+            </svg>
+            <span>{{ Auth::user()->name }}</span>
+          </a>
+        @endguest
       </div>
     </div>
   </footer>

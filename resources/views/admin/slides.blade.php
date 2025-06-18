@@ -8,7 +8,7 @@
                                     <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                                         <li>
                                             <a href="{{ route('admin.index') }}">
-                                                <div class="text-tiny">Dashboard</div>
+                                                <div class="text-tiny">Bảng điều khiển</div>
                                             </a>
                                         </li>
                                         <li>
@@ -25,7 +25,7 @@
                                         <div class="wg-filter flex-grow">
                                             <form class="form-search">
                                                 <fieldset class="name">
-                                                    <input type="text" placeholder="Search here..." class="" name="name"
+                                                    <input type="text" placeholder="Tìm kiếm..." class="" name="name"
                                                         tabindex="2" value="" aria-required="true" required="">
                                                 </fieldset>
                                                 <div class="button-submit">
@@ -34,7 +34,7 @@
                                             </form>
                                         </div>
                                         <a class="tf-button style-1 w208" href="{{ route('admin.slide.add') }}"><i
-                                                class="icon-plus"></i>Add new</a>
+                                                class="icon-plus"></i>Thêm mới</a>
                                     </div>
                                     <div class="wg-table table-all-user">
                                     @if(Session::has('status'))
@@ -44,12 +44,12 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Image</th>
+                                                    <th>Hình ảnh</th>
                                                     <th>Tagline</th>
-                                                    <th>Title</th>
-                                                    <th>Subtitle</th>
-                                                    <th>Link</th>
-                                                    <th>Action</th>
+                                                    <th>Tiêu đề</th>
+                                                    <th>Phụ đề</th>
+                                                    <th>Liên kết</th>
+                                                    <th>Thao tác</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

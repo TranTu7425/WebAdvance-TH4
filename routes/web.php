@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/about', [HomeController::class, 'about'])->name('home.about');
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
 Route::get('/shop/{product_slug}', [ShopController::class, 'product_details'])->name('shop.product.details');
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
@@ -37,12 +38,15 @@ Route::delete('/wishlist/item/remove/{rowId}', [WishlistController::class, 'remo
 Route::delete('/wishlist/clear', [WishlistController::class, 'empty_wishlist'])->name('wishlist.clear');
 Route::post('/wishlist/move-to-cart/{rowId}', [WishlistController::class, 'move_to_cart'])->name('wishlist.move.to.cart');
 
+Route::get('/contact-us', [HomeController::class, 'contact'])->name('home.contact');
+Route::post('/contact/store', [HomeController::class, 'contact_store'])->name('home.contact.store');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/account-dashboard', [UserController::class, 'index'])->name('user.index');
     Route::get('/account-orders', [UserController::class, 'orders'])->name('user.orders');
     Route::get('/account-order/{order_id}/details', [UserController::class, 'order_details'])->name('user.order.details');
     Route::put('/account-order/cancel-order', [UserController::class, 'order_cancel'])->name('user.order.cancel');
+
 });
 
 Route::middleware(['auth', AuthAdmin::class])->group(function () {
@@ -88,7 +92,12 @@ Route::middleware(['auth', AuthAdmin::class])->group(function () {
     Route::get('/admin/contacts', [AdminController::class, 'contacts'])->name('admin.contacts');
     Route::delete('/admin/contact/{id}/delete', [AdminController::class, 'contact_delete'])->name('admin.contact.delete');
 
-    Route::get('/contact-us', [HomeController::class, 'contact'])->name('home.contact');
-    Route::post('/contact/store', [HomeController::class, 'contact_store'])->name('home.contact.store');
+    Route::get('/admin/settings', [AdminController::class, 'settings'])->name('admin.settings');
+    Route::post('/admin/settings/update', [AdminController::class, 'settings_update'])->name('admin.settings.update');
+
     Route::get('/search', [HomeController::class, 'search'])->name('home.search');
+
+    Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::delete('/admin/users/{id}', [AdminController::class, 'user_delete'])->name('admin.user.delete');
+
 });

@@ -185,16 +185,16 @@
             </h5>
             <div id="accordion-filter-price" class="accordion-collapse collapse show border-0"
               aria-labelledby="accordion-heading-price" data-bs-parent="#price-filters">
-              <input class="price-range-slider" type="text" name="price_range" value="" data-slider-min="1"
-                data-slider-max="500" data-slider-step="5" data-slider-value="[{{$min_price}},{{$max_price}}]" data-currency="$" />
+              <input class="price-range-slider" type="text" name="price_range" value="" data-slider-min="1000"
+                data-slider-max="10000000" data-slider-step="100000" data-slider-value="[{{$min_price}},{{$max_price}}]" data-currency="₫" />
               <div class="price-range__info d-flex align-items-center mt-2">
                 <div class="me-auto">
                   <span class="text-secondary">Giá Tối Thiểu: </span>
-                  <span class="price-range__min">$1</span>
+                  <span class="price-range__min">1.000₫</span>
                 </div>
                 <div>
                   <span class="text-secondary">Giá Tối Đa: </span>
-                  <span class="price-range__max">$500</span>
+                  <span class="price-range__max">10.000.000₫</span>
                 </div>
               </div>
             </div>
@@ -220,17 +220,17 @@
             <div class="swiper-slide">
               <div class="slide-split h-100 d-block d-md-flex overflow-hidden">
                 <div class="slide-split_text position-relative d-flex align-items-center"
-                  style="background-color: #f5e6e0;">
+                  style="background-color:rgb(0, 217, 255);">
                   <div class="slideshow-text container p-3 p-xl-5">
                     <h2
                       class="text-uppercase section-title fw-normal mb-3 animate animate_fade animate_btt animate_delay-2">
-                      Phụ Kiện <br /><strong>NỮ</strong></h2>
-                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Phụ kiện là cách tốt nhất để cập nhật diện mạo của bạn. Thêm một chút phong cách với những mẫu mã và màu sắc mới, hoặc chọn những món đồ thời trang vượt thời gian.</h6>
+                      Tháng năm <br /><strong>Rực rỡ</strong></h2>
+                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Tháng năm rực rỡ, những màu sắc đậm đà, những đường nét rõ ràng, những hình ảnh đầy sức sống. Những năm tháng của tuổi trẻ mà mọi người đều có thể tự tin, tự hào với những gì mình đang làm và đang sống.</h6>
                   </div>
                 </div>
                 <div class="slide-split_media position-relative">
-                  <div class="slideshow-bg" style="background-color: #f5e6e0;">
-                    <img loading="lazy" src="assets/images/shop/shop_banner3.jpg" width="630" height="450"
+                  <div class="slideshow-bg" style="background-color:rgb(0, 217, 255);">
+                    <img loading="lazy" src="{{ asset('assets/images/shop/shop_banner1.jpg') }}" width="630" height="450"
                       alt="Phụ kiện nữ" class="slideshow-bg__img object-fit-cover" />
                   </div>
                 </div>
@@ -240,17 +240,17 @@
             <div class="swiper-slide">
               <div class="slide-split h-100 d-block d-md-flex overflow-hidden">
                 <div class="slide-split_text position-relative d-flex align-items-center"
-                  style="background-color: #f5e6e0;">
+                  style="background-color:rgb(0, 217, 255);">
                   <div class="slideshow-text container p-3 p-xl-5">
                     <h2
                       class="text-uppercase section-title fw-normal mb-3 animate animate_fade animate_btt animate_delay-2">
-                      Phụ Kiện <br /><strong>NỮ</strong></h2>
-                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Phụ kiện là cách tốt nhất để cập nhật diện mạo của bạn. Thêm một chút phong cách với những mẫu mã và màu sắc mới, hoặc chọn những món đồ thời trang vượt thời gian.</h6>
+                      Bản lĩnh <br /><strong>Phái mạnh</strong></h2>
+                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Một khí chất mạnh mẽ toát lên từ bên trong – sự độc lập không cần phải chứng minh, sự tự tin không ngần ngại ánh nhìn của thế giới. Là tinh thần kiên định vượt lên mọi thử thách với ý chí không thể khuất phục. </h6>
                   </div>
                 </div>
                 <div class="slide-split_media position-relative">
-                  <div class="slideshow-bg" style="background-color: #f5e6e0;">
-                    <img loading="lazy" src="assets/images/shop/shop_banner3.jpg" width="630" height="450"
+                  <div class="slideshow-bg" style="background-color:rgb(0, 217, 255);">
+                    <img loading="lazy" src="{{ asset('assets/images/shop/shop_banner2.jpg') }}" width="630" height="450"
                       alt="Phụ kiện nữ" class="slideshow-bg__img object-fit-cover" />
                   </div>
                 </div>
@@ -260,17 +260,17 @@
             <div class="swiper-slide">
               <div class="slide-split h-100 d-block d-md-flex overflow-hidden">
                 <div class="slide-split_text position-relative d-flex align-items-center"
-                  style="background-color: #f5e6e0;">
+                  style="background-color:rgb(0, 217, 255);">
                   <div class="slideshow-text container p-3 p-xl-5">
                     <h2
                       class="text-uppercase section-title fw-normal mb-3 animate animate_fade animate_btt animate_delay-2">
-                      Phụ Kiện <br /><strong>NỮ</strong></h2>
-                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Phụ kiện là cách tốt nhất để cập nhật diện mạo của bạn. Thêm một chút phong cách với những mẫu mã và màu sắc mới, hoặc chọn những món đồ thời trang vượt thời gian.</h6>
+                      Duyên dáng <br /><strong>Nét xuân</strong></h2>
+                    <p class="mb-0 animate animate_fade animate_btt animate_delay-5">Tôn vinh nét đẹp của người phụ nữ Việt Nam, hãy cùng nhau tri ân những người phụ nữ đã và đang làm nên sự đẹp đẽ của Đất nước.</h6>
                   </div>
                 </div>
                 <div class="slide-split_media position-relative">
-                  <div class="slideshow-bg" style="background-color: #f5e6e0;">
-                    <img loading="lazy" src="assets/images/shop/shop_banner3.jpg" width="630" height="450"
+                  <div class="slideshow-bg" style="background-color:rgb(0, 217, 255);">
+                    <img loading="lazy" src="{{ asset('assets/images/shop/shop_banner3.jpg') }}" width="630" height="450"
                       alt="Phụ kiện nữ" class="slideshow-bg__img object-fit-cover" />
                   </div>
                 </div>
@@ -359,7 +359,7 @@
                 <a href="{{ route('cart.index') }}" class="pc__atc btn anim_appear-bottom btn position-absolute border-0 text-uppercase fw-medium btn-warning mb-3">Xem Giỏ Hàng</a>
                 @else
                 <form name="addtocart-form" method="post" action="{{ route('cart.add') }}">
-                  @csrf
+                @csrf
                   <input type="hidden" name="id" value="{{ $product->id }}">
                   <input type="hidden" name="quantity" value="1">
                   <input type="hidden" name="name" value="{{ $product->name }}">
@@ -375,9 +375,9 @@
                 <div class="product-card__price d-flex">
                   <span class="money price">
                     @if ($product->sale_price)
-                      <s>{{ $product->regular_price }}</s> ${{ $product->sale_price }}
+                      <s>{{ number_format($product->regular_price) }}₫</s> {{ number_format($product->sale_price) }}₫
                     @else
-                      ${{ $product->regular_price }}
+                      {{ number_format($product->regular_price) }}₫
                     @endif
                   </span>
                 </div>

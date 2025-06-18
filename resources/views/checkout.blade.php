@@ -152,7 +152,7 @@
                         {{ $item->name }} x {{ $item->qty }}
                       </td>
                       <td align="right">
-                        ${{ $item->subtotal }}
+                        {{ $item->subtotal }}đ
                       </td>
                     </tr>
                     @endforeach
@@ -163,15 +163,15 @@
                 <tbody>
                   <tr>
                     <th>Tạm tính</th>
-                    <td class="text-right">${{Cart::instance('cart')->subTotal()}}</td>
+                    <td class="text-right">{{Cart::instance('cart')->subTotal()}}đ</td>
                   </tr>
                   <tr>
                     <th>Giảm giá {{Session::get('coupon')['code']}}</th>
-                    <td class="text-right">${{Session::get('discounts')['discount']}}</td>
+                    <td class="text-right">{{Session::get('discounts')['discount']}}đ</td>
                   </tr>
                   <tr>
                     <th>Tạm tính sau giảm giá</th>
-                    <td class="text-right">${{Session::get('discounts')['subtotal']}}</td>
+                    <td class="text-right">{{Session::get('discounts')['subtotal']}}đ</td>
                   </tr>
                   <tr>
                     <th>Phí vận chuyển</th>
@@ -182,13 +182,13 @@
                   <tr>
                     <th>Thuế VAT</th>
                     <td class="text-right">
-                      {{Session::get('discounts')['tax']}}
+                      {{Session::get('discounts')['tax']}}đ
                     </td>
                   </tr>
                   <tr>
                     <th>Tổng cộng</th>
                     <td class="text-right">
-                      {{Session::get('discounts')['total']}}
+                      {{Session::get('discounts')['total']}}đ
                     </td>
                   </tr>
                 </tbody>
@@ -198,7 +198,7 @@
                   <tbody>
                     <tr>
                       <th>TẠM TÍNH</th>
-                      <td class="text-right">${{ Cart::instance('cart')->subtotal() }}</td>
+                      <td class="text-right">{{ Cart::instance('cart')->subtotal() }}đ</td>
                     </tr>
                     <tr>
                       <th>PHÍ VẬN CHUYỂN</th>
@@ -206,11 +206,11 @@
                     </tr>
                     <tr>
                       <th>THUẾ VAT</th>
-                      <td class="text-right">${{ Cart::instance('cart')->tax() }}</td>
+                      <td class="text-right">{{ Cart::instance('cart')->tax() }}đ</td>
                     </tr>
                     <tr>
                       <th>TỔNG CỘNG</th>
-                      <td class="text-right">${{ Cart::instance('cart')->total() }}</td>
+                      <td class="text-right">{{ Cart::instance('cart')->total() }}đ</td>
                     </tr>
                   </tbody>
                 </table>
@@ -245,7 +245,7 @@
                 </div>
                 
               </div>
-              <button class="btn btn-primary btn-checkout">ĐẶT HÀNG</button>
+              <button class="btn btn-primary btn-checkout" style="background-color: #ff4500 !important; border-color: #ff4500 !important;">ĐẶT HÀNG</button>
             </div>
           </div>
         </div>
