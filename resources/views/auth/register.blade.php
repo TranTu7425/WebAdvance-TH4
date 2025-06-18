@@ -124,19 +124,19 @@
 
 <style>
 .bg-cinnamon {
-    background-color: #8B4513;
+    background-color: #1a237e; /* Xanh đậm */
 }
 .btn-cinnamon {
-    background-color: #8B4513;
+    background-color: #1a237e; /* Xanh đậm */
     color: white;
     border: none;
 }
 .btn-cinnamon:hover {
-    background-color: #6B3410;
+    background-color: #0d47a1; /* Xanh đậm nhạt hơn khi hover */
     color: white;
 }
 .text-cinnamon {
-    color: #8B4513;
+    color: #ff5722; /* Đỏ cam */
 }
 .card {
     border-radius: 15px;
@@ -145,8 +145,18 @@
     background-color: #f8f9fa;
 }
 .form-control:focus {
-    border-color: #8B4513;
-    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+    border-color: #ff5722; /* Đỏ cam khi focus */
+    box-shadow: 0 0 0 0.2rem rgba(255, 87, 34, 0.25);
+}
+a {
+    color: #ff5722 !important; /* Đỏ cam cho các link */
+}
+a:hover {
+    color: #e64a19 !important; /* Đỏ cam đậm hơn khi hover */
+}
+
+.card-header.bg-cinnamon.text-white.text-center.py-3>.mb-0 {
+    color: #ffffff !important;
 }
 </style>
 

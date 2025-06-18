@@ -8,7 +8,7 @@
                 <div class="card-body p-5">
                     <div class="text-center mb-4">
                         <h2 class="text-primary fw-bold">{{ __('Đăng Nhập') }}</h2>
-                        <p class="text-muted">Chào mừng bạn đến với Quế Văn Yên</p>
+                        <p class="text-muted">Chào mừng bạn đến với Phenikaa Fashion Shop</p>
                     </div>
 
                     @if(session('error'))
@@ -101,15 +101,15 @@
         border-radius: 15px;
     }
     .btn-primary {
-        background-color: #8B4513;
-        border-color: #8B4513;
+        background-color: #1a237e; /* Xanh đậm */
+        border-color: #1a237e;
     }
     .btn-primary:hover {
-        background-color: #654321;
-        border-color: #654321;
+        background-color: #0d47a1; /* Xanh đậm nhạt hơn khi hover */
+        border-color: #0d47a1;
     }
     .text-primary {
-        color: #8B4513 !important;
+        color: #1a237e !important; /* Xanh đậm cho text */
     }
     .input-group-text {
         border: none;
@@ -118,8 +118,14 @@
         border: 1px solid #dee2e6;
     }
     .form-control:focus {
-        border-color: #8B4513;
-        box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+        border-color: #ff5722; /* Đỏ cam khi focus */
+        box-shadow: 0 0 0 0.2rem rgba(255, 87, 34, 0.25);
+    }
+    a {
+        color: #ff5722 !important; /* Đỏ cam cho các link */
+    }
+    a:hover {
+        color: #e64a19 !important; /* Đỏ cam đậm hơn khi hover */
     }
 </style>
 @endpush
