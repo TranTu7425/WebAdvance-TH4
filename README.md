@@ -10,6 +10,52 @@
 ## Mô tả
 `Phenikaa Fashion Shop` là một ứng dụng web thương mại điện tử chuyên về thời trang, được xây dựng trên Laravel Framework. Website cung cấp giao diện thân thiện với người dùng, tích hợp đầy đủ các tính năng cần thiết cho một hệ thống thương mại điện tử hiện đại.
 
+### Đối tượng người dùng
+- Khách hàng cá nhân yêu thích thời trang
+- Người tiêu dùng trẻ tuổi (18-35 tuổi)
+- Người dùng thích mua sắm trực tuyến
+- Quản trị viên và nhân viên cửa hàng
+
+### Giá trị cốt lõi
+- **Chất lượng sản phẩm:** Cam kết cung cấp sản phẩm thời trang chất lượng cao
+- **Trải nghiệm người dùng:** Giao diện thân thiện, dễ sử dụng
+- **Dịch vụ khách hàng:** Hỗ trợ nhanh chóng, chuyên nghiệp
+- **Bảo mật:** Đảm bảo an toàn thông tin và giao dịch
+
+## 🎯 Mục tiêu dự án
+
+### Mục tiêu ngắn hạn
+1. **Phát triển hệ thống**
+   - Xây dựng nền tảng thương mại điện tử hoàn chỉnh
+   - Tích hợp đầy đủ các tính năng cần thiết
+   - Đảm bảo hiệu suất và bảo mật hệ thống
+
+2. **Trải nghiệm người dùng**
+   - Tạo giao diện thân thiện, dễ sử dụng
+   - Tối ưu hóa quy trình mua sắm
+   - Cung cấp trải nghiệm mua sắm mượt mà
+
+3. **Quản lý sản phẩm**
+   - Xây dựng hệ thống quản lý sản phẩm hiệu quả
+   - Tổ chức danh mục sản phẩm rõ ràng
+   - Quản lý tồn kho chính xác
+
+### Mục tiêu dài hạn
+1. **Phát triển thương hiệu**
+   - Xây dựng thương hiệu thời trang uy tín
+   - Mở rộng danh mục sản phẩm
+   - Phát triển cộng đồng khách hàng trung thành
+
+2. **Mở rộng thị trường**
+   - Phát triển đa kênh bán hàng
+   - Mở rộng phạm vi phục vụ
+   - Tăng cường hợp tác với các đối tác
+
+3. **Cải tiến liên tục**
+   - Cập nhật công nghệ mới
+   - Nâng cao chất lượng dịch vụ
+   - Tối ưu hóa trải nghiệm người dùng
+
 ## 📦 Tính năng chính
 - **Xác thực người dùng**
   - Đăng ký tài khoản
