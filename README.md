@@ -93,6 +93,33 @@
   - Quản lý liên hệ
   - Cài đặt hệ thống
 
+## 🚀 Giao diện hệ thống
+- **Giao diện đăng nhập:**
+- <img src="public/assets/images/giaodien/dnhap.png"/>
+- **Giao diện đăng ký tài khoản:**
+- <img src="public/assets/images/giaodien/dky.png"/>
+- **Giao diện bảng điều khiển cho quản trị viên:**
+- <img src="public/assets/images/giaodien/dashboard.png"/>
+- **Giao diện quản lý danh sách các sản phẩm:**
+- <img src="public/assets/images/giaodien/dsachsanpham.png"/>
+- **Giao diện quản lý danh sách các thương hiệu:**
+- <img src="public/assets/images/giaodien/dsachthuonghieu.png"/>
+- **Giao diện quản lý danh sách các danh mục:**
+- <img src="public/assets/images/giaodien/dsdanhmuc.png"/>
+- **Giao diện quản lý đơn hàng:**
+- <img src="public/assets/images/giaodien/donhang.png"/>
+- **Giao diện quản lý slide:**
+- <img src="public/assets/images/giaodien/dsslide.png"/>
+- **Giao diện quản lý mã giảm giá:**
+- <img src="public/assets/images/giaodien/magiamgia.png"/>
+- **Giao diện quản lý các liên hệ từ người dùng:**
+- <img src="public/assets/images/giaodien/tinnhan.png"/>
+- **Giao diện quản lý tài khoản người dùng:**
+- <img src="public/assets/images/giaodien/user.png"/>
+- **Giao diện cài đặt tài khoản quản trị viên:**
+- <img src="public/assets/images/giaodien/caidat.png"/>
+
+
 ## 🚀 Yêu cầu hệ thống
 - PHP >= 8.1
 - Composer
