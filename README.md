@@ -157,6 +157,95 @@
 <img src="public/assets/images/giaodien/database.png"/>
 </details>
 
+<details>
+<summary><strong>Sơ đồ tuần tự (Sequence Diagram)</strong></summary>
+
+<details>
+<summary>Đăng nhập</summary>
+<img src="public/assets/images/giaodien/dangnhap.png"/>
+</details>
+
+<details>
+<summary>Đăng ký tài khoản</summary>
+<img src="public/assets/images/giaodien/dkytaikhoan.png"/>
+</details>
+
+<details>
+<summary>Trang chủ (Home Controller)</summary>
+<img src="public/assets/images/giaodien/homecontroller.png"/>
+</details>
+
+<details>
+<summary>Cửa hàng (Shop Controller)</summary>
+<img src="public/assets/images/giaodien/shopcontroller.png"/>
+</details>
+
+<details>
+<summary>Giỏ hàng (Cart Controller)</summary>
+<img src="public/assets/images/giaodien/cartcontroller.png"/>
+</details>
+
+<details>
+<summary>Người dùng (User Controller)</summary>
+<img src="public/assets/images/giaodien/usercontroller.png"/>
+</details>
+
+<details>
+<summary>Sản phẩm yêu thích (Mong muốn)</summary>
+<img src="public/assets/images/giaodien/monguoc.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Bảng điều khiển</summary>
+<img src="public/assets/images/giaodien/qlybangdieukhien.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Cài đặt</summary>
+<img src="public/assets/images/giaodien/qlycaidat.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Danh mục</summary>
+<img src="public/assets/images/giaodien/qlydanhmuc.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Đơn hàng</summary>
+<img src="public/assets/images/giaodien/qlydonhang.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Liên hệ</summary>
+<img src="public/assets/images/giaodien/qlylienhe.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Mã giảm giá</summary>
+<img src="public/assets/images/giaodien/qlymagiamgia.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Sản phẩm</summary>
+<img src="public/assets/images/giaodien/qlysanpham.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Slides</summary>
+<img src="public/assets/images/giaodien/qlyslides.png"/>
+</details>
+
+<details>
+<summary>Quản lý - Thương hiệu</summary>
+<img src="public/assets/images/giaodien/qlythuonghieu.png"/>
+</details>
+
+<details>
+<summary>Quản lý - User</summary>
+<img src="public/assets/images/giaodien/qlyuser.png"/>
+</details>
+
+</details>
 ## 🔍 Phân tích một số Code chính
 
 <details>
