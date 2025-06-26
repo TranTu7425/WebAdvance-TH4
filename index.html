@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phenikaa Fashion Shop - Document</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            color: #24292e;
+            background-color: #f6f8fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 980px;
+            margin: 40px auto;
+            padding: 45px;
+            background-color: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+        }
+
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: 2em;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid #eaecef;
+        }
+        h2 {
+            font-size: 1.5em;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid #eaecef;
+        }
+        h3 {
+            font-size: 1.25em;
+        }
+
+        /* Links */
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Paragraphs and Lists */
+        p, ul, ol {
+            margin-bottom: 16px;
+        }
+        ul, ol {
+            padding-left: 2em;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .centered-content {
+            text-align: center;
+        }
+        .badges img {
+            margin: 0 4px;
+        }
+
+        /* Code Blocks */
+        pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f6f8fa;
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+        code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+        pre code {
+            display: inline;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            line-height: inherit;
+            word-wrap: normal;
+            background-color: transparent;
+            border: 0;
+        }
+        /* Inline code */
+        :not(pre) > code {
+            padding: .2em .4em;
+            margin: 0;
+            font-size: 85%;
+            background-color: rgba(27,31,35,.05);
+            border-radius: 3px;
+        }
+
+        /* Details & Summary (for collapsible sections) */
+        details {
+            display: block;
+            margin-bottom: 16px;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 16px;
+        }
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+        details[open] > summary {
+            margin-bottom: 16px;
+        }
+
+        /* Horizontal Rule */
+        hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: #e1e4e8;
+            border: 0;
+        }
+        
+        /* Grid for images */
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1%;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .image-grid img {
+            width: 48%;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            .image-grid img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="centered-content">
+            <h1>👗 Phenikaa Fashion Shop 👗</h1>
+            <p><strong>Thời trang sành điệu, phong cách riêng bạn!</strong></p>
+            <div class="badges">
+                <img src="https://img.shields.io/badge/Laravel-12.15.x-FF2D20?style=for-the-badge&logo=laravel" alt="Laravel">
+                <img src="https://img.shields.io/badge/PHP-8.1%2B-8892BF?style=for-the-badge&logo=php" alt="PHP">
+                <img src="https://img.shields.io/badge/MySQL-5.7%2B-4479A1?style=for-the-badge&logo=mysql" alt="MySQL">
+                <img src="https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css" alt="TailwindCSS">
+                <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License">
+            </div>
+            <br>
+            <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/trangchu.png" alt="Trang chủ Phenikaa Fashion Shop" style="width: 800px; max-width: 100%;">
+        </div>
+
+        <p><strong><code>Phenikaa Fashion Shop</code></strong> là một ứng dụng web thương mại điện tử chuyên về thời trang, được xây dựng trên Laravel Framework. Website cung cấp giao diện thân thiện với người dùng, tích hợp đầy đủ các tính năng cần thiết cho một hệ thống thương mại điện tử hiện đại.</p>
+        <hr>
+
+        <h2 id="muc-luc">📖 Mục lục</h2>
+        <ul>
+            <li><a href="#thanh-vien-du-an">Thành viên dự án</a></li>
+            <li><a href="#truy-cap-du-an">Truy cập dự án</a></li>
+            <li><a href="#mo-ta-chung">Mô tả</a></li>
+            <li><a href="#muc-tieu-du-an">Mục tiêu dự án</a></li>
+            <li><a href="#tinh-nang-chinh">Tính năng chính</a></li>
+            <li><a href="#cong-nghe-su-dung">Công nghệ sử dụng</a></li>
+            <li><a href="#giao-dien-he-thong">Giao diện hệ thống</a></li>
+            <li><a href="#so-do-uml-co-so-du-lieu">Sơ đồ UML & Cơ sở dữ liệu</a></li>
+            <li><a href="#phan-tich-code-chinh">Phân tích Code chính</a></li>
+            <li><a href="#yeu-cau-he-thong">Yêu cầu hệ thống</a></li>
+            <li><a href="#huong-dan-cai-dat">Hướng dẫn cài đặt</a></li>
+            <li><a href="#dong-gop">Đóng góp</a></li>
+            <li><a href="#giay-phep">Giấy phép</a></li>
+        </ul>
+        <hr>
+
+        <h2 id="thanh-vien-du-an">🧑‍💻 Thành viên dự án</h2>
+        <ul>
+            <li><strong>Trần Anh Tú:</strong> 23010332</li>
+        </ul>
+
+        <h2 id="truy-cap-du-an">🌐 Truy cập dự án</h2>
+        <ul>
+            <li><strong>Public Link:</strong> <a href="http://www.pkafashionshop.live/">Phenikaa Fashion Shop - Thời trang sành điệu</a></li>
+            <li><strong>Demo Link:</strong> <code>[Đang cập nhật]</code></li>
+        </ul>
+
+        <h2 id="mo-ta-chung">📝 Mô tả chung</h2>
+        <h3>Đối tượng người dùng</h3>
+        <ul>
+            <li>🛍️ Khách hàng cá nhân yêu thích thời trang</li>
+            <li>👩‍🎓 Người tiêu dùng trẻ tuổi (18-35 tuổi)</li>
+            <li>💻 Người dùng thích mua sắm trực tuyến</li>
+            <li>👑 Quản trị viên và nhân viên cửa hàng</li>
+        </ul>
+        <h3>Giá trị cốt lõi</h3>
+        <ul>
+            <li><strong>Chất lượng:</strong> Cam kết sản phẩm thời trang chất lượng cao.</li>
+            <li><strong>Trải nghiệm:</strong> Giao diện thân thiện, quy trình mua sắm mượt mà.</li>
+            <li><strong>Dịch vụ:</strong> Hỗ trợ khách hàng nhanh chóng, chuyên nghiệp.</li>
+            <li><strong>Bảo mật:</strong> Đảm bảo an toàn thông tin và giao dịch.</li>
+        </ul>
+
+        <h2 id="muc-tieu-du-an">🎯 Mục tiêu dự án</h2>
+        <h3>Ngắn hạn</h3>
+        <ol>
+            <li><strong>Phát triển hệ thống:</strong> Xây dựng nền tảng TMĐT hoàn chỉnh, hiệu suất cao và bảo mật.</li>
+            <li><strong>Trải nghiệm người dùng:</strong> Tạo giao diện thân thiện, tối ưu hóa quy trình mua sắm.</li>
+            <li><strong>Quản lý sản phẩm:</strong> Xây dựng hệ thống quản lý sản phẩm, danh mục, tồn kho hiệu quả.</li>
+        </ol>
+        <h3>Dài hạn</h3>
+        <ol>
+            <li><strong>Phát triển thương hiệu:</strong> Xây dựng thương hiệu uy tín, mở rộng sản phẩm, tạo cộng đồng trung thành.</li>
+            <li><strong>Mở rộng thị trường:</strong> Phát triển đa kênh bán hàng, mở rộng phạm vi phục vụ.</li>
+            <li><strong>Cải tiến liên tục:</strong> Cập nhật công nghệ mới, nâng cao chất lượng dịch vụ.</li>
+        </ol>
+
+        <h2 id="tinh-nang-chinh">✨ Tính năng chính</h2>
+        <details>
+            <summary><strong>🔑 Xác thực người dùng</strong></summary>
+            <ul>
+                <li><strong>Đăng ký/Đăng nhập:</strong> Hỗ trợ đăng ký qua Email (có xác thực), Google, Facebook. Đăng nhập an toàn với "Remember me" và khôi phục mật khẩu.</li>
+                <li><strong>Quản lý tài khoản:</strong> Cập nhật thông tin cá nhân, thay đổi mật khẩu, quản lý tùy chọn bảo mật.</li>
+                <li><strong>Quản lý địa chỉ:</strong> Thêm/sửa/xóa nhiều địa chỉ giao hàng, đặt địa chỉ mặc định.</li>
+            </ul>
+        </details>
+        <details>
+            <summary><strong>👚 Quản lý sản phẩm</strong></summary>
+            <ul>
+                <li><strong>Hiển thị sản phẩm:</strong> Danh sách sản phẩm theo danh mục, hỗ trợ phân trang, sắp xếp.</li>
+                <li><strong>Tìm kiếm & Lọc:</strong> Công cụ tìm kiếm thông minh, lọc theo giá, kích thước, màu sắc.</li>
+                <li><strong>Chi tiết sản phẩm:</strong> Hình ảnh chất lượng cao, xem 360 độ, mô tả chi tiết, đánh giá từ người dùng.</li>
+                <li><strong>Quản lý Thương hiệu & Danh mục:</strong> Quản lý thương hiệu, cấu trúc danh mục đa cấp, tùy chỉnh SEO.</li>
+            </ul>
+        </details>
+        <details>
+            <summary><strong>🛒 Giỏ hàng & Thanh toán</strong></summary>
+            <ul>
+                <li><strong>Giỏ hàng thông minh:</strong> Thêm/xóa/cập nhật số lượng sản phẩm, đồng bộ giữa các thiết bị.</li>
+                <li><strong>Mã giảm giá:</strong> Hệ thống mã giảm giá linh hoạt (phần trăm, số tiền cố định).</li>
+                <li><strong>Thanh toán an toàn:</strong> Tích hợp nhiều cổng thanh toán (VNPay, Momo, thẻ tín dụng) với bảo mật SSL.</li>
+            </ul>
+        </details>
+        <details>
+            <summary><strong>🚚 Quản lý đơn hàng</strong></summary>
+            <ul>
+                <li><strong>Theo dõi đơn hàng:</strong> Cập nhật trạng thái realtime, gửi thông báo qua email/SMS.</li>
+                <li><strong>Lịch sử mua hàng:</strong> Lưu trữ và tra cứu toàn bộ lịch sử đơn hàng.</li>
+                <li><strong>Hóa đơn & Giao hàng:</strong> Xuất hóa đơn điện tử (PDF), theo dõi vị trí giao hàng.</li>
+            </ul>
+        </details>
+        <details>
+            <summary><strong>👑 Trang quản trị (Admin Panel)</strong></summary>
+            <ul>
+                <li><strong>Dashboard:</strong> Thống kê doanh thu, biểu đồ phân tích, các chỉ số KPI.</li>
+                <li><strong>Quản lý toàn diện:</strong> Quản lý sản phẩm, tồn kho, đơn hàng, người dùng, mã giảm giá, slider, tin nhắn liên hệ.</li>
+                <li><strong>Cài đặt hệ thống:</strong> Cấu hình chung, thanh toán, vận chuyển, tích hợp bên thứ ba.</li>
+            </ul>
+        </details>
+
+        <h2 id="cong-nghe-su-dung">💻 Công nghệ sử dụng</h2>
+        <ul>
+            <li><strong>Backend:</strong> <strong>Laravel 12.15.x</strong></li>
+            <li><strong>Frontend:</strong> <strong>Blade Templates</strong>, <strong>TailwindCSS</strong>, <strong>Alpine.js</strong></li>
+            <li><strong>Database:</strong> <strong>MySQL</strong></li>
+            <li><strong>Công cụ phát triển:</strong> <strong>Git</strong>, <strong>Composer</strong>, <strong>NPM</strong></li>
+        </ul>
+
+        <h2 id="giao-dien-he-thong">🖼️ Giao diện hệ thống</h2>
+        <details>
+            <summary><strong>👑 Giao diện Quản trị viên (Admin)</strong></summary>
+            <div class="image-grid">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/dashboard.png" alt="Dashboard">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/dsachsanpham.png" alt="Quản lý sản phẩm">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/donhang.png" alt="Quản lý đơn hàng">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/user.png" alt="Quản lý người dùng">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/magiamgia.png" alt="Quản lý mã giảm giá">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/dsslide.png" alt="Quản lý slide">
+            </div>
+        </details>
+        <details>
+            <summary><strong>👤 Giao diện Người dùng (Client)</strong></summary>
+            <div class="image-grid">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/trangchu.png" alt="Trang chủ">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/cuahang.png" alt="Cửa hàng">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/spham.png" alt="Chi tiết sản phẩm">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/giohang.png" alt="Giỏ hàng">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/lienhe.png" alt="Liên hệ">
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/user1.png" alt="Dashboard người dùng">
+            </div>
+        </details>
+
+        <h2 id="so-do-uml-co-so-du-lieu">🏗️ Sơ đồ UML & Cơ sở dữ liệu</h2>
+        <details>
+            <summary><strong>Sơ đồ cấu trúc (Class Diagram)</strong></summary>
+            <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/classuml.png" alt="Class Diagram">
+        </details>
+        <details>
+            <summary><strong>Sơ đồ Cơ sở dữ liệu (Database Schema)</strong></summary>
+            <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/database.png" alt="Database Schema">
+        </details>
+        <details>
+            <summary><strong>Sơ đồ tuần tự (Sequence Diagram)</strong></summary>
+            <details>
+                <summary>Đăng nhập</summary>
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/dangnhap.png" alt="Sequence Diagram Đăng nhập">
+            </details>
+            <details>
+                <summary>Đăng ký tài khoản</summary>
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/dkytaikhoan.png" alt="Sequence Diagram Đăng ký tài khoản">
+            </details>
+            <details>
+                <summary>Trang chủ (Home Controller)</summary>
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/homecontroller.png" alt="Sequence Diagram Trang chủ">
+            </details>
+            <details>
+                <summary>Cửa hàng (Shop Controller)</summary>
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/shopcontroller.png" alt="Sequence Diagram Cửa hàng">
+            </details>
+            <details>
+                <summary>Giỏ hàng (Cart Controller)</summary>
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/cartcontroller.png" alt="Sequence Diagram Giỏ hàng">
+            </details>
+            <details>
+                <summary>Người dùng (User Controller)</summary>
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/usercontroller.png" alt="Sequence Diagram Người dùng">
+            </details>
+            <details>
+                <summary>Sản phẩm yêu thích (Mong muốn)</summary>
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/monguoc.png" alt="Sequence Diagram Sản phẩm yêu thích">
+            </details>
+            <details>
+                <summary>Quản lý - Bảng điều khiển</summary>
+                <img src="https://raw.githubusercontent.com/TuTran-dev/Phenikaa-Fashion-Shop/main/public/assets/images/giaodien/qlybangdieukhien.png" alt="Sequence Diagram Quản lý - Bảng điều khiển">
+            </details>
+             <!-- ... Add other sequence diagrams similarly ... -->
+        </details>
+
+        <h2 id="phan-tich-code-chinh">🔍 Phân tích một số Code chính</h2>
+        <details>
+            <summary><strong>📄 <code>app/Http/Controllers/UserController.php</code></strong></summary>
+            <p>Controller này xử lý logic cho khu vực tài khoản của người dùng đã đăng nhập.</p>
+            <h4><code>index()</code> - Trang tổng quan</h4>
+            <ul>
+                <li><strong>Mô tả:</strong> Hiển thị trang dashboard chính cho người dùng.</li>
+                <li><strong>Luồng xử lý:</strong> Trả về view <code>user.index</code>.</li>
+            </ul>
+            <pre><code class="language-php">public function index()
+{
+    return view('user.index');
+}</code></pre>
+            <h4><code>orders()</code> - Lịch sử đơn hàng</h4>
+            <ul>
+                <li><strong>Mô tả:</strong> Hiển thị danh sách các đơn hàng của người dùng.</li>
+                <li><strong>Luồng xử lý:</strong> Lấy các đơn hàng của <code>Auth::user()</code>, sắp xếp mới nhất và phân trang.</li>
+            </ul>
+            <pre><code class="language-php">public function orders()
+{
+    $orders = Order::where('user_id', Auth::user()->id)
+                    ->orderBy('created_at', 'desc')
+                    ->paginate(10);
+    return view('user.orders', compact('orders'));
+}</code></pre>
+            <h4><code>order_details($order_id)</code> - Chi tiết đơn hàng</h4>
+            <ul>
+                <li><strong>Mô tả:</strong> Hiển thị chi tiết một đơn hàng cụ thể.</li>
+                <li><strong>Luồng xử lý:</strong> Tìm đơn hàng theo <code>id</code> và đảm bảo nó thuộc về người dùng đang đăng nhập để bảo mật.</li>
+            </ul>
+            <pre><code class="language-php">public function order_details($order_id)
+{
+    $order = Order::where('user_id', Auth::user()->id)->where('id', $order_id)->first();
+    if($order) {
+        $orderItems = OrderItem::where('order_id', $order->id)->paginate(12);
+        $transaction = Transaction::where('order_id', $order->id)->first();
+        return view('user.order-details', compact('order', 'orderItems', 'transaction'));
+    }
+    return redirect()->route('login');
+}</code></pre>
+        </details>
+        <details>
+            <summary><strong>📄 <code>app/Models/User.php</code></strong></summary>
+            <p>Model trung tâm đại diện cho người dùng, tích hợp sẵn các chức năng xác thực của Laravel.</p>
+            <ul>
+                <li><strong><code>$fillable</code></strong>: Các thuộc tính được phép gán hàng loạt (<code>name</code>, <code>email</code>, <code>phone</code>, <code>password</code>, <code>utype</code>).</li>
+                <li><strong><code>$hidden</code></strong>: Các thuộc tính nhạy cảm bị ẩn khi chuyển sang JSON (<code>password</code>, <code>remember_token</code>).</li>
+                <li><strong><code>casts()</code></strong>: Tự động chuyển đổi kiểu dữ liệu, đặc biệt là tự động <strong>băm mật khẩu</strong> khi gán.</li>
+            </ul>
+            <pre><code class="language-php">protected function casts(): array
+{
+    return [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed', // Tự động hash mật khẩu
+    ];
+}</code></pre>
+            <ul>
+                <li><strong>Relationships</strong>: Định nghĩa các mối quan hệ như <code>hasMany</code> với <code>Address</code>, <code>Contact</code>, <code>Setting</code>.</li>
+            </ul>
+            <pre><code class="language-php">public function addresses()
+{
+    return $this->hasMany(Address::class);
+}</code></pre>
+        </details>
+        <details>
+            <summary><strong>📄 <code>resources/views/user/account-nav.blade.php</code></strong></summary>
+            <p>Đây là file Blade tạo thanh điều hướng trong trang tài khoản người dùng, sử dụng <code>route()</code> helper của Laravel để tạo URL động và an toàn.</p>
+            <ul>
+                <li><strong>Đăng xuất an toàn:</strong> Chức năng Đăng xuất được đặt trong một form với phương thức <code>POST</code> và token <code>@csrf</code> để tuân thủ tiêu chuẩn bảo mật, chống lại tấn công CSRF.</li>
+            </ul>
+            <pre><code class="language-html"><ul class="account-nav">
+    <li><a href="{{ route('user.index') }}">Bảng điều khiển</a></li>
+    <li><a href="{{ route('user.orders') }}">Đơn hàng</a></li>
+    <li><a href="{{ route('user.addresses') }}">Địa chỉ</a></li>
+    <li><a href="{{ route('user.details') }}">Thông tin tài khoản</a></li>
+    <li><a href="{{ route('wishlist.index') }}">Danh sách yêu thích</a></li>
+    <li>
+        <form method="POST" action="{{ route('logout') }}" id="logout-form">
+            @csrf
+            <a href="{{ route('logout') }}" 
+               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Đăng xuất
+            </a>
+        </form>
+    </li>
+</ul></code></pre>
+        </details>
+
+        <h2 id="yeu-cau-he-thong">⚙️ Yêu cầu hệ thống</h2>
+        <ul>
+            <li><strong>PHP:</strong> <code>^8.1</code></li>
+            <li><strong>Composer:</strong> <code>^2.0</code></li>
+            <li><strong>MySQL:</strong> <code>>= 5.7</code></li>
+            <li><strong>Node.js:</strong> <code>>= 16.x</code></li>
+            <li><strong>NPM:</strong> <code>>= 8.x</code></li>
+        </ul>
+
+        <h2 id="huong-dan-cai-dat">🔧 Hướng dẫn cài đặt</h2>
+        <ol>
+            <li><strong>Clone repository về máy:</strong>
+                <pre><code class="language-bash">git clone [repository-url]
+cd phenikaa-fashion-shop</code></pre>
+            </li>
+            <li><strong>Cài đặt các gói phụ thuộc:</strong>
+                <pre><code class="language-bash">composer install
+npm install</code></pre>
+            </li>
+            <li><strong>Cấu hình môi trường:</strong>
+                <ul>
+                    <li>Sao chép tệp <code>.env.example</code> thành <code>.env</code>.
+                        <pre><code class="language-bash">cp .env.example .env</code></pre>
+                    </li>
+                    <li>Tạo khóa ứng dụng mới.
+                        <pre><code class="language-bash">php artisan key:generate</code></pre>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Cấu hình cơ sở dữ liệu trong tệp <code>.env</code>:</strong>
+                <pre><code class="language-env">DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=phenikaa_fashion
+DB_USERNAME=root
+DB_PASSWORD=</code></pre>
+            </li>
+            <li><strong>Chạy Migrations và Seeders để tạo cấu trúc bảng và dữ liệu mẫu:</strong>
+                <pre><code class="language-bash">php artisan migrate --seed</code></pre>
+            </li>
+            <li><strong>Biên dịch tài nguyên frontend:</strong>
+                <pre><code class="language-bash">npm run build</code></pre>
+            </li>
+            <li><strong>Khởi chạy máy chủ phát triển:</strong>
+                <pre><code class="language-bash">php artisan serve</code></pre>
+                <p>Ứng dụng sẽ chạy tại: <code>http://127.0.0.1:8000</code></p>
+            </li>
+        </ol>
+
+        <h2 id="dong-gop">🤝 Đóng góp</h2>
+        <p>Mọi đóng góp đều được hoan nghênh! Vui lòng thực hiện theo các bước sau:</p>
+        <ol>
+            <li><strong>Fork</strong> repository này.</li>
+            <li>Tạo một branch mới (<code>git checkout -b feature/AmazingFeature</code>).</li>
+            <li>Commit các thay đổi của bạn (<code>git commit -m 'Add some AmazingFeature'</code>).</li>
+            <li>Push lên branch (<code>git push origin feature/AmazingFeature</code>).</li>
+            <li>Mở một <strong>Pull Request</strong>.</li>
+        </ol>
+
+        <h2 id="giay-phep">📄 Giấy phép</h2>
+        <p>Dự án này được cấp phép theo <strong>MIT License</strong>. Xem chi tiết tại tệp <code>LICENSE</code>.</p>
+        <hr>
+        <div class="centered-content">
+            <p>Cảm ơn bạn đã ghé thăm!</p>
+        </div>
+    </div>
+
+</body>
+</html>
