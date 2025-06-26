@@ -5,7 +5,7 @@
 
 **Thời trang sành điệu, phong cách riêng bạn!**
 
-![Laravel](https://img.shields.io/badge/Laravel-10.x-FF2D20?style=for-the-badge&logo=laravel)
+![Laravel](https://img.shields.io/badge/Laravel-12.15.x-FF2D20?style=for-the-badge&logo=laravel)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-8892BF?style=for-the-badge&logo=php)
 ![MySQL](https://img.shields.io/badge/MySQL-5.7%2B-4479A1?style=for-the-badge&logo=mysql)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css)
@@ -114,7 +114,7 @@
 </details>
 
 ## 💻 Công nghệ sử dụng
-- **Backend:** **Laravel 10.x**
+- **Backend:** **Laravel 12.15.x**
 - **Frontend:** **Blade Templates**, **TailwindCSS**, **Alpine.js**
 - **Database:** **MySQL**
 - **Công cụ phát triển:** **Git**, **Composer**, **NPM**
